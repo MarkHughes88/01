@@ -2,9 +2,8 @@
 
 .menu {
 	background-color: $menu-background;
-	border: $menu-border-width solid $menu-border-color;
 
 	width: $menu-width;
 	height: $menu-height;
-	padding: $menu-padding;
+	padding: 0;
 }

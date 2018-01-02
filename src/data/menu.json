@@ -1,0 +1,16 @@
+{
+	"Links": [
+		{
+			"id": 	"1",
+			"icon": "menu__links__item__icon fa fa-home",
+			"text":	"Home",
+			"url": 	"/"
+		},
+		{
+			"id": 	"2",
+			"icon": "menu__links__item__icon fa fa-question-circle",
+			"text":	"Help",
+			"url": 	"/help"
+		}
+	]
+}
