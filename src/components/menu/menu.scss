@@ -1,5 +1,9 @@
 @import '../../style/scss/main.scss';
 
+.menu {
+	display: inline-block;
+}
+
 .menu__bar {
 	background-color: $menu-background;
 
