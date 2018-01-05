@@ -17,9 +17,9 @@ class Menu extends React.Component {
 	}
 
 	toggleSlider() {
-		/* this.setState({
-			this.state.active: !this.state.active
-		}); */
+	  // this.setState({
+		// 	this.state.active: !this.state.active
+		// });
 	}
 
 	render() {
@@ -43,7 +43,9 @@ class Menu extends React.Component {
 						{ Links }
 					</ul>
 				</div>
-				<Slider />
+				<div className={`menu__slider ${!this.state.slider.active ?  'menu__slider--hidden' : 'menu__slider--active'}`}>
+					<Slider />
+				</div>
 			</div>
 		)
 	}
