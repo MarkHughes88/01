@@ -2,31 +2,31 @@
 	"Links": [
 		{
 			"id": 	"1",
-			"icon": "menu__links__item__icon fa fa-home",
+			"icon": "menu__bar__links__item__icon fa fa-home",
 			"text":	"Home",
 			"url": 	"/"
 		},
 		{
 			"id": 	"2",
-			"icon": "menu__links__item__icon fa fa-file-o",
+			"icon": "menu__bar__links__item__icon fa fa-file-o",
 			"text":	"Content",
 			"url": 	"/content"
 		},
 		{
 			"id": 	"3",
-			"icon": "menu__links__item__icon fa fa-picture-o",
+			"icon": "menu__bar__links__item__icon fa fa-picture-o",
 			"text":	"Media",
 			"url": 	"/media"
 		},
 		{
 			"id": 	"4",
-			"icon": "menu__links__item__icon fa fa-user",
+			"icon": "menu__bar__links__item__icon fa fa-user",
 			"text":	"Users",
 			"url": 	"/users"
 		},
 		{
 			"id": 	"5",
-			"icon": "menu__links__item__icon fa fa-question-circle",
+			"icon": "menu__bar__links__item__icon fa fa-question-circle",
 			"text":	"Help",
 			"url": 	"/help"
 		}

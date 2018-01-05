@@ -1,0 +1,14 @@
+@import '../../../style/scss/main.scss';
+
+.menu__user {
+	padding: $menu-padding-y $menu-padding-x;
+	text-align: center;
+}
+
+.menu__user__icon {
+	border: $menu-user-icon-border-width $menu-user-icon-border-color solid;
+	background: $menu-user-icon-background;
+	width: $menu-user-icon-width;
+	height: $menu-user-icon-height;
+	display: inline-block;
+}

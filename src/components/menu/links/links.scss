@@ -1,24 +1,25 @@
 @import '../../../style/scss/main.scss';
 
-.menu__links {
+.menu__bar__links {
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
 }
 
-.menu__links__item {
+.menu__bar__links__item {
 	display: block;
 	position: relative;
 	width: $menu-width;
-	padding: $menu-padding $menu-padding/2;
+	padding: $menu-padding-y $menu-padding-x;
 	border-bottom: $menu-border-color solid $menu-border-width;
 	text-align: center;
-	font-size: 12px;
+	font-size: $menu-link-font-size;
 	color: rgba($font-white, 1);
 	background-color: $menu-link-background;
 	border-left: $menu-link-border-width $menu-link-background solid;
+	border-right: $menu-link-border-width $menu-link-background solid;
 
-	.menu__links__item__text {
+	.menu__bar__links__item__text {
 		position: absolute;
 		left: 50%;
 		@include translate(-50%, 0);
@@ -30,15 +31,16 @@
 		text-decoration: none;
 		background-color: darken($menu-link-background, 10%);
 		border-left: $menu-link-border-width $menu-link-border-color solid;
+		border-right: $menu-link-border-width darken($menu-link-background, 10%) solid;
 	}
 }
 
-.menu__links__item__icon {
+.menu__bar__links__item__icon {
 	display: block;
-	font-size: 25px;
+	font-size: $menu-link-icon-size;
 }
 
-.menu__links__item:last-of-type {
+.menu__bar__links__item:last-of-type {
 	position: absolute;
 	bottom: 0;
 	border-top: $menu-border-color solid $menu-border-width;

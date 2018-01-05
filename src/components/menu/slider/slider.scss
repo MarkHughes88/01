@@ -4,4 +4,17 @@
 	width: $menu-slider-width;
 	height: $menu-slider-height;
 	background-color: $menu-slider-background;
+	position: absolute;
+	left: $menu-width;
+	top: 0;
+	z-index: $menu-slider-z;
+	border-right: $menu-slider-border-width $menu-slider-border-color solid;
+}
+
+.menu__slider--active {
+	display: block;
+}
+
+.menu__slider--hidden {
+	display: none;
 }

@@ -1,31 +1,48 @@
-$brand-primary: 		#aaa;
-$brand-secondary: 	#ccc;
-$brand-tertiary:		#eee;
+//Brand colours
+$brand-primary: 									#A64D79;
+$brand-secondary: 								#0F66A8;
+$brand-tertiary:									#F5E9EF;
 
-$border-color: 			#666;
-$border-width: 			1px;
+$brand-red: 											#D63524;
 
-$padding-sm: 				11px;
-$padding: 					22px;
-$padding-lg: 				44px;
-$padding-xl: 				66px;
+//Border styles
+$border-color: 										#666;
+$border-width: 										1px;
+
+//Padding sizes
+$padding: 												22px;
+$padding-sm: 											$padding / 2;
+$padding-lg: 											$padding * 2;
+$padding-xl: 											$padding * 3;
 
 //Font styles
-$font-white: #fafafa;
-$font-black: #1a1a1a;
+$font-white: 											#fafafa;
+$font-black: 											#1a1a1a;
 
 // Menu styles
-$menu-background: 		$brand-primary;
-$menu-border-color: 	$border-color;
-$menu-border-width: 	$border-width;
-$menu-width: 					80px;
-$menu-height: 				100vh;
-$menu-padding: 				$padding;
+$menu-background: 								$brand-primary;
+$menu-border-color: 							$border-color;
+$menu-border-width: 							$border-width;
+$menu-width: 											80px;
+$menu-height: 										100vh;
+$menu-padding-x: 									$padding-sm;
+$menu-padding-y: 									$padding;
 
-$menu-link-background: darken($menu-background, 10%);
-$menu-link-border-color: red;
-$menu-link-border-width: 5px;
+$menu-user-icon-border-width: 		3px;
+$menu-user-icon-border-color: 		darken($menu-background, 10%);
+$menu-user-icon-background: 			lighten($menu-background, 10%);
+$menu-user-icon-width: 						40px;
+$menu-user-icon-height: 					40px;
 
-$menu-slider-width: 			200px;
-$menu-slider-height: 			$menu-height;
-$menu-slider-background: 	white;
+$menu-link-background: 						darken($menu-background, 10%);
+$menu-link-border-color: 					$brand-red;
+$menu-link-border-width: 					5px;
+$menu-link-icon-size: 						25px;
+$menu-link-font-size: 						12px;
+
+$menu-slider-width: 							300px;
+$menu-slider-height: 							$menu-height;
+$menu-slider-background: 					#fff;
+$menu-slider-z: 									99;
+$menu-slider-border-width:  			$border-width;
+$menu-slider-border-color: 				$border-color;

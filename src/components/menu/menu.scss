@@ -1,6 +1,6 @@
 @import '../../style/scss/main.scss';
 
-.menu {
+.menu__bar {
 	background-color: $menu-background;
 
 	width: $menu-width;
@@ -9,19 +9,19 @@
 
 	display: inline-block;
 
-	.menu__links__item__text {
+	.menu__bar__links__item__text {
 		color: rgba($font-white, 0);
 	}
 
 	&:hover {
-		.menu__links__item__text {
+		.menu__bar__links__item__text {
 			color: rgba($font-white, 1);
 			@include transition(all, .5s, ease);
 		}
 	}
 
 	&:not(:hover) {
-		.menu__links__item__text {
+		.menu__bar__links__item__text {
 			color: rgba($font-white, 0);
 			@include transition(all, .5s, ease);
 		}

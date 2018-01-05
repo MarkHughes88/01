@@ -2,6 +2,7 @@ import React from 'react';
 import './menu.scss';
 
 import Data from '../../data/menu.json';
+import User from './user/user';
 import Link from './links/links';
 import Slider from './slider/slider';
 
@@ -16,7 +17,9 @@ class Menu extends React.Component {
 	}
 
 	toggleSlider() {
-		console.log(this.state)
+		/* this.setState({
+			this.state.active: !this.state.active
+		}); */
 	}
 
 	render() {
@@ -27,15 +30,20 @@ class Menu extends React.Component {
 					icon={ link.icon }
 					text={ link.text }
 					url={ link.url }
+					toggleSlider={ () => this.toggleSlider() }
 				/>
 			)
 		});
 
 		return (
 			<div className='menu'>
-				<ul className='menu__links'>
-					{ Links }
-				</ul>
+				<div className='menu__bar'>
+					<User />
+					<ul className='menu__bar__links'>
+						{ Links }
+					</ul>
+				</div>
+				<Slider />
 			</div>
 		)
 	}
