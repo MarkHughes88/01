@@ -1,12 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 import Menu from './components/menu/menu'
+import Pages from './components/pages/pages'
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App">
         <Menu />
+        <Pages />
       </div>
     );
   }

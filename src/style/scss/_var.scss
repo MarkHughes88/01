@@ -2,7 +2,7 @@ $brand-primary: 		#aaa;
 $brand-secondary: 	#ccc;
 $brand-tertiary:		#eee;
 
-$border-color: 			#999;
+$border-color: 			#666;
 $border-width: 			1px;
 
 $padding-sm: 				11px;
@@ -10,10 +10,22 @@ $padding: 					22px;
 $padding-lg: 				44px;
 $padding-xl: 				66px;
 
+//Font styles
+$font-white: #fafafa;
+$font-black: #1a1a1a;
+
 // Menu styles
-$menu-background: 		$brand-secondary;
+$menu-background: 		$brand-primary;
 $menu-border-color: 	$border-color;
 $menu-border-width: 	$border-width;
 $menu-width: 					80px;
 $menu-height: 				100vh;
 $menu-padding: 				$padding;
+
+$menu-link-background: darken($menu-background, 10%);
+$menu-link-border-color: red;
+$menu-link-border-width: 5px;
+
+$menu-slider-width: 			200px;
+$menu-slider-height: 			$menu-height;
+$menu-slider-background: 	white;

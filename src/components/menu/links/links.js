@@ -4,10 +4,14 @@ import './links.scss';
 class Links extends React.Component {
 	render() {
 		return (
-			<a href={ this.props.url }>
-				<li className='menu__links__item'>
+			<a
+				href={ this.props.url  }
+				className='menu__links__item'
+				onClick={ () => this.props.toggleSlider() }
+			>
+				<li>
 					<span className={ this.props.icon }></span>
-					{ this.props.text }
+					<span className='menu__links__item__text'>{ this.props.text }</span>
 				</li>
 			</a>
 		)

@@ -3,18 +3,43 @@
 .menu__links {
 	list-style: none;
 	padding: 0px;
-	margin: 0px;	
+	margin: 0px;
 }
 
 .menu__links__item {
+	display: block;
+	position: relative;
 	width: $menu-width;
-	padding: $menu-padding;
+	padding: $menu-padding $menu-padding/2;
 	border-bottom: $menu-border-color solid $menu-border-width;
 	text-align: center;
 	font-size: 12px;
+	color: rgba($font-white, 1);
+	background-color: $menu-link-background;
+	border-left: $menu-link-border-width $menu-link-background solid;
+
+	.menu__links__item__text {
+		position: absolute;
+		left: 50%;
+		@include translate(-50%, 0);
+	}
+
+	&:hover {
+		@include transition(all, .5s, ease);
+		color: rgba($font-white, 1);
+		text-decoration: none;
+		background-color: darken($menu-link-background, 10%);
+		border-left: $menu-link-border-width $menu-link-border-color solid;
+	}
 }
 
 .menu__links__item__icon {
 	display: block;
-	font-size: 20px;
+	font-size: 25px;
+}
+
+.menu__links__item:last-of-type {
+	position: absolute;
+	bottom: 0;
+	border-top: $menu-border-color solid $menu-border-width;
 }

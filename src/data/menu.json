@@ -8,6 +8,24 @@
 		},
 		{
 			"id": 	"2",
+			"icon": "menu__links__item__icon fa fa-file-o",
+			"text":	"Content",
+			"url": 	"/content"
+		},
+		{
+			"id": 	"3",
+			"icon": "menu__links__item__icon fa fa-picture-o",
+			"text":	"Media",
+			"url": 	"/media"
+		},
+		{
+			"id": 	"4",
+			"icon": "menu__links__item__icon fa fa-user",
+			"text":	"Users",
+			"url": 	"/users"
+		},
+		{
+			"id": 	"5",
 			"icon": "menu__links__item__icon fa fa-question-circle",
 			"text":	"Help",
 			"url": 	"/help"

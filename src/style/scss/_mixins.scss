@@ -3,3 +3,18 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+@mixin transition($attr, $dur, $method) {
+-webkit-transition: $attr $dur $method;
+   -moz-transition: $attr $dur $method;
+     -o-transition: $attr $dur $method;
+        transition: $attr $dur $method;
+}
+
+@mixin translate($x, $y) {
+  -webkit-transform: translate($x, $y);
+     -moz-transform: translate($x, $y);
+      -ms-transform: translate($x, $y);
+       -o-transform: translate($x, $y);
+          transform: translate($x, $y);
+}
