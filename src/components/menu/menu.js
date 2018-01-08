@@ -26,7 +26,7 @@ class Menu extends React.Component {
 	}
 
 	toggleSlider(text) {
-		let dontToggle = text !== 'Home' || 'Help';
+		let dontToggle = text === 'Home' || 'Help';
 
 		dontToggle ? this.setSliderState(
 			!this.state.active || this.state.content !== text, text

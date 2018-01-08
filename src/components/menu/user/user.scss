@@ -12,4 +12,8 @@
 	width: $menu-user-icon-width;
 	height: $menu-user-icon-height;
 	display: inline-block;
+
+	&:hover {
+		cursor: pointer;
+	}
 }

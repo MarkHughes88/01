@@ -14,6 +14,8 @@ class Slider extends React.Component {
 				return <Media />;
 			case 'Users':
 				return <Users />;
+			default:
+				return null;
 		}
 	}
 
