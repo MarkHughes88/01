@@ -6,3 +6,8 @@
 	width: calc(100vw - #{$menu-width});
 	padding: $padding;
 }
+
+.pages--margin {
+	margin-left: $menu-slider-width;
+	@transition(all, ease, .5s);
+}

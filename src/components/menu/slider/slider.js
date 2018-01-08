@@ -6,8 +6,7 @@ import Media from './media/media';
 import Users from './users/users';
 
 class Slider extends React.Component {
-	render() {
-		let content = null;
+	renderSwitch(content) {
 		switch(content) {
 			case 'Content':
 				return <Content />;
@@ -16,10 +15,12 @@ class Slider extends React.Component {
 			case 'Users':
 				return <Users />;
 		}
+	}
 
+	render() {
 		return (
-			<div className='menu__slider__content'>
-				{ this.props.content }
+			<div>
+				{ this.renderSwitch(this.props.content) }
 			</div>
 		)
 	}
