@@ -1,7 +1,6 @@
 @import '../../../style/scss/main.scss';
 
 .menu__slider {
-	width: $menu-slider-width;
 	height: $menu-slider-height;
 	background-color: $menu-slider-background;
 	position: absolute;
@@ -9,12 +8,16 @@
 	top: 0;
 	z-index: $menu-slider-z;
 	border-right: $menu-slider-border-width $menu-slider-border-color solid;
+	width: 0px;
+	overflow: hidden;
+	@include transition(width, ease, .5s);
 }
 
 .menu__slider--active {
-	display: block;
+	width: $menu-slider-width;
+	@include transition(width, ease, .5s);
 }
 
-.menu__slider--hidden {
-	display: none;
+.menu__slider__content {
+	padding: $padding;
 }

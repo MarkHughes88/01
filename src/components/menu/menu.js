@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './menu.scss';
 
 import Data from '../../data/menu.json';
@@ -11,15 +12,23 @@ class Menu extends React.Component {
 		super(props);
 		this.state = {
 			slider: {
-				active: false
+				active: false,
+				content: null
 			}
 		}
 	}
 
-	toggleSlider() {
-	  // this.setState({
-		// 	this.state.active: !this.state.active
-		// });
+	setSliderState(active, content) {
+		this.setState({
+	 	 active,
+		 content
+	  });
+	}
+
+	toggleSlider(text) {
+		let dontToggle = text !== 'Home' || 'Help';
+
+		dontToggle ? this.setSliderState(!this.state.active) : this.setSliderState(false);
 	}
 
 	render() {
@@ -30,7 +39,7 @@ class Menu extends React.Component {
 					icon={ link.icon }
 					text={ link.text }
 					url={ link.url }
-					toggleSlider={ () => this.toggleSlider() }
+					toggleSlider={ (text) => this.toggleSlider(text) }
 				/>
 			)
 		});
@@ -43,7 +52,7 @@ class Menu extends React.Component {
 						{ Links }
 					</ul>
 				</div>
-				<div className={`menu__slider ${!this.state.slider.active ?  'menu__slider--hidden' : 'menu__slider--active'}`}>
+				<div className={`menu__slider ${this.state.active ? 'menu__slider--active' : null }`}>
 					<Slider />
 				</div>
 			</div>

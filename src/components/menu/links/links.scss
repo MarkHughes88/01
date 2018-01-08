@@ -33,12 +33,14 @@
 		background-color: darken($menu-link-background, 10%);
 		border-left: $menu-link-border-width $menu-link-border-color solid;
 		border-right: $menu-link-border-width darken($menu-link-background, 10%) solid;
+		cursor: pointer;
 	}
 }
 
 .menu__bar__links__item__icon {
 	display: block;
 	font-size: $menu-link-icon-size;
+	color: $font-white;
 }
 
 .menu__bar__links__item:last-of-type {

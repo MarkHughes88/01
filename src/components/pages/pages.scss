@@ -3,5 +3,6 @@
 .pages {
 	display: inline-block;
 	position: absolute;
-	width: calc(100vw - #{$menu-width})
+	width: calc(100vw - #{$menu-width});
+	padding: $padding;
 }

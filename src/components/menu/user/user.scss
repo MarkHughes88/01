@@ -7,7 +7,8 @@
 
 .menu__user__icon {
 	border: $menu-user-icon-border-width $menu-user-icon-border-color solid;
-	background: $menu-user-icon-background;
+	background-image: url($menu-user-icon-background);
+	background-size: contain;
 	width: $menu-user-icon-width;
 	height: $menu-user-icon-height;
 	display: inline-block;
