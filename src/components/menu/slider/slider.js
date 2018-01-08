@@ -19,7 +19,7 @@ class Slider extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='menu__slider__content'>
 				{ this.renderSwitch(this.props.content) }
 			</div>
 		)

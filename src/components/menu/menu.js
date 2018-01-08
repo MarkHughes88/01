@@ -29,7 +29,7 @@ class Menu extends React.Component {
 		let dontToggle = text !== 'Home' || 'Help';
 
 		dontToggle ? this.setSliderState(
-			!this.state.active || this.state.content === text, text
+			!this.state.active || this.state.content !== text, text
 		) : this.setSliderState(false);
 	}
 
@@ -55,7 +55,7 @@ class Menu extends React.Component {
 					</ul>
 				</div>
 				<div className={`menu__slider ${this.state.active ? 'menu__slider--active' : null }`}>
-					<Slider />
+					<Slider content={this.state.content} />
 				</div>
 			</div>
 		)
