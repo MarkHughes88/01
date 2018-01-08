@@ -12,7 +12,7 @@ class Pages extends React.Component {
 	render() {
 		return (
 			<Router>
-				<div className='pages'>
+				<div className={`pages ${this.props.sliderActive ? 'pages--margin' : null }`}>
 					<Route exact path='/' component={ () => <Home /> } />
 					<Route exact path='/content' component={ () => <Content /> } />
 					<Route exact path='/media' component={ () => <Media /> } />

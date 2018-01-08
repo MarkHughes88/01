@@ -5,9 +5,11 @@
 	position: absolute;
 	width: calc(100vw - #{$menu-width});
 	padding: $padding;
+	@include transition(all, ease, .5s);
 }
 
 .pages--margin {
 	margin-left: $menu-slider-width;
-	@transition(all, ease, .5s);
+	width: calc(100vw - (#{$menu-slider-width} + #{$menu-width}));
+	@include transition(margin, ease, .5s);
 }

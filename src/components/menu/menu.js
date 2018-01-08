@@ -8,29 +8,13 @@ import Link from './links/links';
 import Slider from './slider/slider';
 
 class Menu extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			slider: {
-				active: false,
-				content: null
-			}
-		}
-	}
-
-	setSliderState(active, content) {
-		this.setState({
-	 	 active,
-		 content
-	  });
-	}
-
 	toggleSlider(text) {
 		let dontToggle = text === 'Home' || 'Help';
 
-		dontToggle ? this.setSliderState(
-			!this.state.active || this.state.content !== text, text
-		) : this.setSliderState(false);
+		dontToggle ? this.props.sliderState(
+			!this.props.sliderActive || this.props.sliderContent !== text, text
+		) : this.props.sliderState(false);
+
 	}
 
 	render() {
@@ -54,8 +38,8 @@ class Menu extends React.Component {
 						{ Links }
 					</ul>
 				</div>
-				<div className={`menu__slider ${this.state.active ? 'menu__slider--active' : null }`}>
-					<Slider content={this.state.content} />
+				<div className={`menu__slider ${this.props.sliderActive ? 'menu__slider--active' : null }`}>
+					<Slider content={this.props.sliderContent} />
 				</div>
 			</div>
 		)
