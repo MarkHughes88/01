@@ -6,6 +6,7 @@
 	top: 0;
 	@include translate(-50%, 0);
 	width: 0;
+	height: 0;
 	overflow: hidden;
 	@include box-shadow(4px, 4px, 5px, #eee);
 	z-index: $user-box-z;
@@ -22,6 +23,7 @@
 	@include transition(all, ease, .2s);
 	opacity: 1;
 	width: $user-box-width;
+	height: $user-box-height;
 }
 
 .user-box__header {
