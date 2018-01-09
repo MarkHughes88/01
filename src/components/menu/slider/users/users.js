@@ -21,7 +21,7 @@ class Users extends React.Component {
 										<span className='user-list__item__buttons'>
 											<span className='fa fa-pencil'></span> &nbsp;
 											<span className='fa fa-trash'></span>
-										</span>									
+										</span>
 									</li>;
 			          })}
 							</ul>
