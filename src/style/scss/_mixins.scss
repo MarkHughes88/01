@@ -24,3 +24,9 @@
 	-webkit-box-shadow: $x $y $fade $color;
 	        box-shadow: $x $y $fade $color;
 }
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+   	 -moz-border-radius: $radius;
+          border-radius: $radius;
+}

@@ -1,2 +1,29 @@
 @import '_var.scss';
 @import '_mixins.scss';
+
+// Button Styles
+.button {
+	@include border-radius($button-border-radius);
+	border: 0px solid transparent;
+	padding: $button-padding;
+}
+
+.button-primary {
+	background-color: $button-primary-background;
+	color: $font-white;
+
+	&:hover {
+		background-color: darken($button-primary-background, 10%);
+		@include transition(all, ease, .2s);
+	}
+}
+
+.button-secondary {
+	background-color: $button-secondary-background;
+	color: $font-white;
+
+	&:hover {
+		background-color: darken($button-secondary-background, 10%);
+		@include transition(all, ease, .2s);
+	}
+}

@@ -8,7 +8,6 @@ import UserData from './data/users.json';
 
 class App extends React.Component {
   constructor(props) {
-
 		super(props);
 		this.state = {
 			slider: {
@@ -17,7 +16,14 @@ class App extends React.Component {
 			},
       userBox: {
         userBoxActive: false
-      }
+      },
+      activeUser: {
+        id: null,
+        userName: 'Mark',
+        role: 'Admin',
+        email: 'admin@myemail.com'
+      },
+      users: []
 		}
 	}
 
@@ -44,7 +50,13 @@ class App extends React.Component {
           userBoxState={ () => this.setUserBoxState() }
         />
       <Pages sliderActive={ this.state.sliderActive } />
-      <UserBox userBoxActive={ this.state.userBoxActive } />
+      <UserBox
+        userBoxActive={ this.state.userBoxActive }
+        userBoxState={ () => this.setUserBoxState() }
+        activeUserName={ this.state.activeUser.userName }
+        activeUserRole={ this.state.activeUser.role }
+        activeUserEmail={ this.state.activeUser.email }
+      />
       </div>
     );
   }

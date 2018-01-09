@@ -6,7 +6,6 @@
 	top: 0;
 	@include translate(-50%, 0);
 	width: 0;
-	height: 0;
 	overflow: hidden;
 	@include box-shadow(4px, 4px, 5px, #eee);
 	z-index: $user-box-z;
@@ -23,13 +22,25 @@
 	@include transition(all, ease, .2s);
 	opacity: 1;
 	width: $user-box-width;
-	height: $user-box-height;
 }
 
 .user-box__header {
 	background-color: $user-box-header-background;
 	color: $font-white;
 	padding: $padding;
+	position: relative;
+}
+
+.user-box__header__title {
+	margin-bottom: 0px !important;
+}
+
+.user-box__header__close {
+	position: absolute;
+	right: $padding;
+	top: 50%;
+	@include translate(0, -50%);
+	cursor: pointer;
 }
 
 .user-box__content {
@@ -43,4 +54,16 @@
 	border: $user-box-icon-border-width $user-box-icon-border-color solid;
 	background-image: url($user-box-icon-background);
 	background-size: contain;
+}
+
+.user-box__content__details {
+	padding: $padding;
+	margin-bottom: $padding;
+	background-color: $brand-tertiary;
+
+	ul {
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
 }

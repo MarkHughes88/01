@@ -1,11 +1,22 @@
 {
-	"Users": [
-		{
-			"Active": {
+	"Users": {
+		"Active": {
+			"id":						"0001",
+			"username": 		"Admin",
+			"email":				"admin@myemail.com"
+		},
+		"Current": [
+			{
 				"id":						"0001",
-				"Username": 		"Admin",
-				"Email":				"admin@myemail.com"
+				"username": 		"Admin",
+				"email":				"admin@myemail.com"
+			},
+			{
+				"id":						"0002",
+				"username": 		"Editor",
+				"email":				"editor@myemail.com"
 			}
-		}
-	]
+		]
+	}
+
 }

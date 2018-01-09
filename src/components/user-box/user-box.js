@@ -8,13 +8,39 @@ class UserBox extends React.Component {
 				<div className='container-fluid'>
 					<div className='row'>
 						<div className='container-fluid user-box__header'>
-							<h2>User Details</h2>
+							<h2 className='user-box__header__title'>Logged in User</h2>
+							<span
+								className='fa fa-window-close user-box__header__close'
+								onClick={ this.props.userBoxState }
+							></span>
 						</div>
 					</div>
 					<div className='row'>
-						<div className='container-fluid user-box__content text-center'>
-							<span className='user-box__content__icon rounded-circle'></span>
-							<h3>Welcome User</h3>
+						<div className='container-fluid user-box__content'>
+							<div className='row'>
+								<div className='container-fluid text-center'>
+									<span className='user-box__content__icon rounded-circle'></span>
+									<h3>Welcome { this.props.activeUserName }</h3>
+								</div>
+							</div>
+							<div className='row justify-content-sm-center'>
+								<div className='sm-offset-4 user-box__content__details'>
+									<h4>User details</h4>
+									<ul className=''>
+										<li><strong>Username:</strong> &nbsp; { this.props.activeUserName }</li>
+										<li><strong>Role:</strong> &nbsp; { this.props.activeUserRole }</li>
+										<li><strong>Email:</strong> &nbsp; { this.props.activeUserEmail }</li>
+									</ul>
+								</div>
+							</div>
+							<div className='row'>
+								<div className='col-sm-6'>
+									<button className='btn button button-primary btn-block'>Edit details</button>
+								</div>
+								<div className='col-sm-6'>
+									<button className='btn button button-secondary btn-block'>Log out</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

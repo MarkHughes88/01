@@ -1,6 +1,6 @@
 //Brand colours
-$brand-primary: 									#A64D79;
-$brand-secondary: 								#0F66A8;
+$brand-primary: 									#F4AC12;
+$brand-secondary: 								#A64D79;
 $brand-tertiary:									#F5E9EF;
 
 $brand-red: 											#D63524;
@@ -19,8 +19,15 @@ $padding-xl: 											$padding * 3;
 $font-white: 											#fafafa;
 $font-black: 											#1a1a1a;
 
-// Menu styles
-$menu-background: 								$brand-primary;
+//Button styles
+$button-border-radius: 						4px;
+$button-padding: 									$padding;
+
+$button-primary-background: 			$brand-primary;
+$button-secondary-background: 		$brand-secondary;
+
+//Menu styles
+$menu-background: 								$brand-secondary;
 $menu-border-color: 							$border-color;
 $menu-border-width: 							$border-width;
 $menu-width: 											80px;
@@ -54,7 +61,7 @@ $user-box-z: 											100;
 $user-box-background: 						white;
 $user-box-border-color:						$border-color;
 $user-box-border-width: 					$border-width;
-$user-box-header-background: 			$brand-primary;
+$user-box-header-background: 			$brand-secondary;
 
 $user-box-icon-size: 							100px;
 $user-box-icon-border-width: 			$menu-user-icon-border-width;
