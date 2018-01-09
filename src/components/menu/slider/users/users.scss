@@ -1,0 +1,13 @@
+@import '../../../../style/scss/main.scss';
+
+.user-list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	position: relative;
+}
+
+.user-list__item__buttons {
+	float: right;
+	text-align: right;
+}

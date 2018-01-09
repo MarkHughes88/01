@@ -4,7 +4,9 @@ import './user-box.scss';
 class UserBox extends React.Component {
 	render() {
 		return (
-			<div className={`user-box ${this.props.userBoxActive ? 'user-box--active' : null }`}>
+			<div
+				className={`user-box ${this.props.userBoxActive ? 'user-box--active' : null }`}
+			>
 				<div className='container-fluid'>
 					<div className='row'>
 						<div className='container-fluid user-box__header'>
@@ -24,13 +26,28 @@ class UserBox extends React.Component {
 								</div>
 							</div>
 							<div className='row justify-content-sm-center'>
-								<div className='sm-offset-4 user-box__content__details'>
+								<div className='col-sm-9 user-box__content__details'>
 									<h4>User details</h4>
-									<ul className=''>
-										<li><strong>Username:</strong> &nbsp; { this.props.activeUserName }</li>
-										<li><strong>Role:</strong> &nbsp; { this.props.activeUserRole }</li>
-										<li><strong>Email:</strong> &nbsp; { this.props.activeUserEmail }</li>
-									</ul>
+									<dl className='row'>
+										<dt className='col-sm-5'>
+											Username:
+										</dt>
+										<dd className='col-sm-7'>
+											{ this.props.activeUserName }
+										</dd>
+										<dt className='col-sm-5'>
+											Role:
+										</dt>
+										<dd className='col-sm-7'>
+											{ this.props.activeUserRole }
+										</dd>
+										<dt className='col-sm-5'>
+											Email:
+										</dt>
+										<dd className='col-sm-7'>
+											{ this.props.activeUserEmail }
+										</dd>
+									</dl>
 								</div>
 							</div>
 							<div className='row'>

@@ -13,7 +13,12 @@ class Slider extends React.Component {
 			case 'Media':
 				return <Media />;
 			case 'Users':
-				return <Users />;
+				return <Users
+					userIds={ this.props.userIds }
+					userNames={ this.props.userNames }
+					userRoles={ this.props.userRoles }
+					userEmails={ this.props.userEmails }
+				/>;
 			default:
 				return null;
 		}
@@ -21,7 +26,7 @@ class Slider extends React.Component {
 
 	render() {
 		return (
-			<div className='menu__slider__content'>
+			<div className='container-fluid'>
 				{ this.renderSwitch(this.props.content) }
 			</div>
 		)

@@ -11,6 +11,13 @@
         transition: $attr $dur $method;
 }
 
+@mixin transition-delay($delay) {
+	-webkit-transition-delay: $delay;
+     -moz-transition-delay: $delay;
+       -o-transition-delay: $delay;
+          transition-delay: $delay;
+}
+
 @mixin translate($x, $y) {
   -webkit-transform: translate($x, $y);
      -moz-transform: translate($x, $y);

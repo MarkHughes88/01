@@ -35,6 +35,8 @@ $menu-height: 										100vh;
 $menu-padding-x: 									$padding-sm;
 $menu-padding-y: 									$padding;
 
+$menu-user-height: 								90px;
+
 $menu-user-icon-border-width: 		3px;
 $menu-user-icon-border-color: 		darken($menu-background, 10%);
 $menu-user-icon-background: 			'http://agarioskins.com/submitted/useruploads/Rick%20sanchez.png';
@@ -53,6 +55,14 @@ $menu-slider-background: 					#fff;
 $menu-slider-z: 									99;
 $menu-slider-border-width:  			$border-width;
 $menu-slider-border-color: 				$border-color;
+
+$menu-slider-header-background: 	darken($brand-secondary, 10%);
+$menu-slider-header-color: 				$font-white;
+$menu-slider-header-padding: 			$padding;
+$menu-slider-header-height: 			$menu-user-height;
+
+$menu-slider-content-padding: 		$padding;
+$menu-slider-content-width: 			$menu-slider-width;
 
 //User box
 $user-box-height: 								300px;

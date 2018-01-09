@@ -1,22 +1,22 @@
 {
-	"Users": {
-		"Active": {
+	"Users": [
+		{
 			"id":						"0001",
-			"username": 		"Admin",
-			"email":				"admin@myemail.com"
+			"username": 		"Mark",
+			"role": 				"Admin",
+			"email":				"mark@myemail.com"
 		},
-		"Current": [
-			{
-				"id":						"0001",
-				"username": 		"Admin",
-				"email":				"admin@myemail.com"
-			},
-			{
-				"id":						"0002",
-				"username": 		"Editor",
-				"email":				"editor@myemail.com"
-			}
-		]
-	}
-
+		{
+			"id":						"0002",
+			"username": 		"John",
+			"role": 				"Editor",
+			"email":				"john@myemail.com"
+		},
+		{
+			"id":						"0003",
+			"username": 		"Thomas",
+			"role": 				"Editor",
+			"email":				"tom@myemail.com"
+		}
+	]
 }

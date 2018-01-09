@@ -11,14 +11,35 @@
 	width: 0px;
 	overflow: hidden;
 	@include transition(width, ease, .5s);
+
+	&:not(.menu__slider--active) {
+		.menu__slider__content {
+			opacity: 0;
+			@include transition(all, ease, .1s);
+		}
+	}
 }
 
 .menu__slider--active {
 	width: $menu-slider-width;
 	@include transition(width, ease, .5s);
 	@include box-shadow(4px, 0px, 5px, #eee);
+
+	.menu__slider__content {
+		opacity: 1;
+		@include transition(all, ease, .2s);
+		@include transition-delay(.4s);
+	}
+}
+
+.menu__slider__header {
+	background-color: $menu-slider-header-background;
+	color: $menu-slider-header-color;
+	padding: $menu-slider-header-padding;
+	height: $menu-slider-header-height;
 }
 
 .menu__slider__content {
-	padding: $padding;
+	padding: $menu-slider-content-padding;
+	width: $menu-slider-content-width;
 }

@@ -18,14 +18,15 @@ class App extends React.Component {
         userBoxActive: false
       },
       activeUser: {
-        id: null,
+        id: '0001',
         userName: 'Mark',
         role: 'Admin',
-        email: 'admin@myemail.com'
+        email: 'mark@myemail.com'
       },
-      users: []
+      users: UserData.Users
 		}
 	}
+
 
   setSliderState(sliderActive, sliderContent) {
     this.setState({
@@ -48,15 +49,21 @@ class App extends React.Component {
           sliderContent={ this.state.sliderContent }
           sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
           userBoxState={ () => this.setUserBoxState() }
+          userIds={ this.state.users.map(user => user.id) }
+          userNames={ this.state.users.map(user => user.username) }
+          userRoles={ this.state.users.map(user => user.role) }
+          userEmails={ this.state.users.map(user => user.email) }
         />
-      <Pages sliderActive={ this.state.sliderActive } />
-      <UserBox
-        userBoxActive={ this.state.userBoxActive }
-        userBoxState={ () => this.setUserBoxState() }
-        activeUserName={ this.state.activeUser.userName }
-        activeUserRole={ this.state.activeUser.role }
-        activeUserEmail={ this.state.activeUser.email }
-      />
+        <Pages
+          sliderActive={ this.state.sliderActive }
+        />
+        <UserBox
+          userBoxActive={ this.state.userBoxActive }
+          userBoxState={ () => this.setUserBoxState() }
+          activeUserName={ this.state.activeUser.userName }
+          activeUserRole={ this.state.activeUser.role }
+          activeUserEmail={ this.state.activeUser.email }
+        />
       </div>
     );
   }
