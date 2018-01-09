@@ -18,3 +18,9 @@
        -o-transform: translate($x, $y);
           transform: translate($x, $y);
 }
+
+@mixin box-shadow($x, $y, $fade, $color) {
+	   -moz-box-shadow: $x $y $fade $color;
+	-webkit-box-shadow: $x $y $fade $color;
+	        box-shadow: $x $y $fade $color;
+}

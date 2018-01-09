@@ -1,0 +1,11 @@
+{
+	"Users": [
+		{
+			"Active": {
+				"id":						"0001",
+				"Username": 		"Admin",
+				"Email":				"admin@myemail.com"
+			}
+		}
+	]
+}

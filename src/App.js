@@ -1,36 +1,50 @@
 import React from 'react';
 import './App.css';
-import Menu from './components/menu/menu'
-import Pages from './components/pages/pages'
+import Menu from './components/menu/menu';
+import Pages from './components/pages/pages';
+import UserBox from './components/user-box/user-box';
+
+import UserData from './data/users.json';
 
 class App extends React.Component {
   constructor(props) {
+
 		super(props);
 		this.state = {
 			slider: {
-				active: false,
-				content: null
-			}
+				sliderActive: false,
+				sliderContent: null
+			},
+      userBox: {
+        userBoxActive: false
+      }
 		}
 	}
 
-  setSliderState(active, content) {
+  setSliderState(sliderActive, sliderContent) {
     this.setState({
-     active,
-     content
+     sliderActive,
+     sliderContent
     });
+  }
+
+  setUserBoxState() {
+    this.setState({
+      userBoxActive: !this.state.userBoxActive
+    })
   }
 
   render() {
     return (
       <div className="App">
         <Menu
-          sliderActive={ this.state.active }
-          sliderContent={ this.state.content }
-          sliderState={ (active, content) => this.setSliderState(active, content) }
-          toggleSlider={ (text) => this.toggleSlider(text) }
+          sliderActive={ this.state.sliderActive }
+          sliderContent={ this.state.sliderContent }
+          sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
+          userBoxState={ () => this.setUserBoxState() }
         />
-      <Pages sliderActive={ this.state.active } />
+      <Pages sliderActive={ this.state.sliderActive } />
+      <UserBox userBoxActive={ this.state.userBoxActive } />
       </div>
     );
   }

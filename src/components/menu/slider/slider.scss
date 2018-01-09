@@ -16,6 +16,7 @@
 .menu__slider--active {
 	width: $menu-slider-width;
 	@include transition(width, ease, .5s);
+	@include box-shadow(4px, 0px, 5px, #eee);
 }
 
 .menu__slider__content {

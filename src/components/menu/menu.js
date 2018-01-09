@@ -30,16 +30,19 @@ class Menu extends React.Component {
 			)
 		});
 
+
 		return (
 			<div className='menu'>
 				<div className='menu__bar'>
-					<User />
+					<User
+						userBoxState={ this.props.userBoxState }
+					/>
 					<ul className='menu__bar__links'>
 						{ Links }
 					</ul>
 				</div>
 				<div className={`menu__slider ${this.props.sliderActive ? 'menu__slider--active' : null }`}>
-					<Slider content={this.props.sliderContent} />
+					<Slider content={ this.props.sliderContent } />
 				</div>
 			</div>
 		)
