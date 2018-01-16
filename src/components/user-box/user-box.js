@@ -8,7 +8,7 @@ class UserBox extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			logout: true
+			logout: false
 		}
 	}
 
@@ -16,23 +16,22 @@ class UserBox extends React.Component {
 		this.setState({
 			logout: !this.state.logout
 		})
-
-		console.log(this.state.logout)
 	}
 
 	renderSwitch() {
 		switch(this.state.logout) {
 			case true:
+				return <Logout
+					toggleLogout={ () => this.toggleLogout() }
+				/>
+			case false:
 				return <UserDetails
 					activeUserName={ this.props.activeUserName }
 					activeUserRole={ this.props.activeUserRole }
 					activeUserEmail={ this.props.activeUserEmail }
 					toggleLogout={ () => this.toggleLogout() }
 				/>;
-			case false:
-				return <Logout
-					toggleLogout={ () => this.toggleLogout() }
-				/>
+			default: { this.renderSwitch(false) }
 		}
 	}
 
