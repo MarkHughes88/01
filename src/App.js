@@ -19,12 +19,21 @@ class App extends React.Component {
       },
       activeUser: {
         id: '0001',
-        userName: 'Mark',
+        name: 'Mark',
+        userName: 'MarkHughes88',
         role: 'Admin',
         email: 'mark@myemail.com'
       },
+      SelectedUser: {
+        id: undefined,
+        name: undefined,
+        userName: undefined,
+        role: undefined,
+        email: undefined
+      },
       users: UserData.Users
 		}
+    this.selectUser = this.selectUser.bind(this);
 	}
 
 
@@ -41,6 +50,15 @@ class App extends React.Component {
     })
   }
 
+  selectUser(id) {
+    this.setState({
+      SelectedUser: {
+        id: id
+      }
+    })
+    console.log(this.state.SelectedUser.id)
+  }
+
   render() {
     return (
       <div className="App">
@@ -50,6 +68,7 @@ class App extends React.Component {
           sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
           userBoxState={ () => this.setUserBoxState() }
           users={ this.state.users }
+          selectUser={ (id) => this.selectUser(id) }
         />
         <Pages
           sliderActive={ this.state.sliderActive }

@@ -27,3 +27,16 @@
 		@include transition(all, ease, .2s);
 	}
 }
+
+.form-control {
+	height: 44px !important;
+	border: 1px solid $border-color;
+}
+
+.button-dropdown {
+	background-color: white;
+	color: $font-black;
+	border: 1px solid $border-color;
+	padding: 0px 22px;
+	line-height: 44px;
+}

@@ -2,69 +2,73 @@
 	"Users": [
 		{
 			"id":						"0001",
-			"username": 		"Mark",
+			"name":					"Mark",
+			"username": 		"MarkHughes88",
 			"role": 				"Admin",
 			"email":				"mark@myemail.com"
 		},
 		{
 			"id":						"0002",
-			"username": 		"John",
+			"name":					"John",
+			"username": 		"JohnBoy",
 			"role": 				"Editor",
 			"email":				"john@myemail.com"
 		},
 		{
 			"id":						"0003",
-			"username": 		"Thomas",
+			"name":					"Thomas",
+			"username": 		"Nothadoth",
 			"role": 				"Admin",
 			"email":				"thomas@myemail.com"
 		},
 		{
 			"id":						"0004",
-			"username": 		"Michael",
+			"name":					"Michael",
+			"username": 		"SpareHeadOne",
 			"role": 				"User",
 			"email":				"michael@myemail.com"
 		},
 		{
 			"id":						"0005",
-			"username": 		"Christopher",
+			"name":					"Christopher",
+			"username": 		"MelonHead",
 			"role": 				"User",
 			"email":				"christopher@myemail.com"
 		},
 		{
 			"id":						"0006",
-			"username": 		"Claire",
+			"name":					"Claire",
+			"username": 		"CMurda",
 			"role": 				"User",
 			"email":				"claire@myemail.com"
 		},
 		{
 			"id":						"0007",
-			"username": 		"William",
+			"name":					"William",
+			"username": 		"Billybob",
 			"role": 				"User",
 			"email":				"william@myemail.com"
 		},
 		{
 			"id":						"0008",
-			"username": 		"Tilly",
+			"name":					"Tilly-mai",
+			"username": 		"TilMeister",
 			"role": 				"User",
 			"email":				"tilly@myemail.com"
 		},
 		{
 			"id":						"0009",
-			"username": 		"James",
+			"name":					"James",
+			"username": 		"Jimbob88",
 			"role": 				"User",
 			"email":				"james@myemail.com"
 		},
 		{
 			"id":						"0010",
-			"username": 		"Peter",
+			"name":					"Peter",
+			"username": 		"MrMclaren",
 			"role": 				"User",
 			"email":				"peter@myemail.com"
-		},
-		{
-			"id":						"0011",
-			"username": 		"Lynn",
-			"role": 				"User",
-			"email":				"lynn@myemail.com"
 		}
 	]
 }

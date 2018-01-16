@@ -22,16 +22,17 @@ class Users extends React.Component {
 											<span className='fa fa-user'></span> &nbsp;
 											<span className='user-list__item__name'>{ user.username }</span>
 											<span className='user-list__item__buttons'>
-												<a href='/users'>
-													<span className='fa fa-pencil'></span>
-											 	</a>
-												&nbsp;
-												<span className='fa fa-trash'></span>
+											<span
+												className='fa fa-pencil'
+												onClick={ (id) => this.props.selectUser(user.id) }
+											></span>
+											&nbsp;
+											<span className='fa fa-trash'></span>
 											</span>
 										</li>
 									}
 									return false;
-								})}
+								}, this)}
 
 								<li className='user-list__title'>Editors</li>
 								{this.props.users.map(function(user, id, username, role) {
@@ -40,16 +41,17 @@ class Users extends React.Component {
 											<span className='fa fa-user'></span> &nbsp;
 											<span className='user-list__item__name'>{ user.username }</span>
 											<span className='user-list__item__buttons'>
-												<a href='/users'>
-													<span className='fa fa-pencil'></span>
-											 	</a>
+												<span
+													className='fa fa-pencil'
+													onClick={ (id) => this.props.selectUser(user.id) }
+												></span>
 												&nbsp;
 												<span className='fa fa-trash'></span>
 											</span>
 										</li>
 									}
 									return false;
-								})}
+								}, this)}
 
 								<li className='user-list__title'>Users</li>
 								{this.props.users.map(function(user, id, username, role) {
@@ -58,16 +60,18 @@ class Users extends React.Component {
 											<span className='fa fa-user'></span> &nbsp;
 											<span className='user-list__item__name'>{ user.username }</span>
 											<span className='user-list__item__buttons'>
-												<a href='/users'>
-													<span className='fa fa-pencil'></span>
-											 	</a>
+												<span
+													className='fa fa-pencil'
+													onClick={ (id) => this.props.selectUser(user.id) }
+												></span>
 												&nbsp;
 												<span className='fa fa-trash'></span>
 											</span>
 										</li>
 									}
 									return false;
-								})}
+								}, this)}
+
 							</ul>
 						</div>
 					</div>
