@@ -43,10 +43,7 @@ class Menu extends React.Component {
 				<div className={`menu__slider ${this.props.sliderActive ? 'menu__slider--active' : null }`}>
 					<Slider
 						content={ this.props.sliderContent }
-						userIds={ this.props.userIds }
-						userNames={ this.props.userNames }
-						userRoles={ this.props.userRoles }
-						userEmails={ this.props.userEmails }
+						users={ this.props.users }
 					/>
 				</div>
 			</div>

@@ -13,12 +13,7 @@ class Slider extends React.Component {
 			case 'Media':
 				return <Media />;
 			case 'Users':
-				return <Users
-					userIds={ this.props.userIds }
-					userNames={ this.props.userNames }
-					userRoles={ this.props.userRoles }
-					userEmails={ this.props.userEmails }
-				/>;
+				return <Users users={ this.props.users } />;
 			default:
 				return null;
 		}

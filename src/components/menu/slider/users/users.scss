@@ -7,6 +7,16 @@
 	position: relative;
 }
 
+.user-list__title {
+	font-weight: bold;
+	margin-top: $padding;
+	display: inline-block;
+}
+
+.user-list__title:first-of-type {
+	margin-top: 0px !important;
+}
+
 .user-list__item__buttons {
 	float: right;
 	text-align: right;

@@ -49,10 +49,7 @@ class App extends React.Component {
           sliderContent={ this.state.sliderContent }
           sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
           userBoxState={ () => this.setUserBoxState() }
-          userIds={ this.state.users.map(user => user.id) }
-          userNames={ this.state.users.map(user => user.username) }
-          userRoles={ this.state.users.map(user => user.role) }
-          userEmails={ this.state.users.map(user => user.email) }
+          users={ this.state.users }
         />
         <Pages
           sliderActive={ this.state.sliderActive }

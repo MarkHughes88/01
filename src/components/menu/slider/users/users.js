@@ -14,19 +14,60 @@ class Users extends React.Component {
 					<div className='row'>
 						<div className='menu__slider__content container-fluid'>
 							<ul className='user-list'>
-								{this.props.userNames.map(function(userName){
-			            return <li className='user-list__item'>
-										<span className='fa fa-user'></span> &nbsp;
-										<span className='user-list__item__name'>{ userName }</span>
-										<span className='user-list__item__buttons'>
-											<a href='/users'>
-												<span className='fa fa-pencil'></span>
-										 	</a>
-											&nbsp;
-											<span className='fa fa-trash'></span>
-										</span>
-									</li>
-			          })}
+
+								<li className='user-list__title'>Admins</li>
+								{this.props.users.map(function(user, id, username, role) {
+									if (user.role === 'Admin') {
+										return <li key={ user.id } className='user-list__item'>
+											<span className='fa fa-user'></span> &nbsp;
+											<span className='user-list__item__name'>{ user.username }</span>
+											<span className='user-list__item__buttons'>
+												<a href='/users'>
+													<span className='fa fa-pencil'></span>
+											 	</a>
+												&nbsp;
+												<span className='fa fa-trash'></span>
+											</span>
+										</li>
+									}
+									return false;
+								})}
+
+								<li className='user-list__title'>Editors</li>
+								{this.props.users.map(function(user, id, username, role) {
+									if (user.role === 'Editor') {
+										return <li key={ user.id } className='user-list__item'>
+											<span className='fa fa-user'></span> &nbsp;
+											<span className='user-list__item__name'>{ user.username }</span>
+											<span className='user-list__item__buttons'>
+												<a href='/users'>
+													<span className='fa fa-pencil'></span>
+											 	</a>
+												&nbsp;
+												<span className='fa fa-trash'></span>
+											</span>
+										</li>
+									}
+									return false;
+								})}
+
+								<li className='user-list__title'>Users</li>
+								{this.props.users.map(function(user, id, username, role) {
+									if (user.role === 'User') {
+										return <li key={ user.id } className='user-list__item'>
+											<span className='fa fa-user'></span> &nbsp;
+											<span className='user-list__item__name'>{ user.username }</span>
+											<span className='user-list__item__buttons'>
+												<a href='/users'>
+													<span className='fa fa-pencil'></span>
+											 	</a>
+												&nbsp;
+												<span className='fa fa-trash'></span>
+											</span>
+										</li>
+									}
+									return false;
+								})}
 							</ul>
 						</div>
 					</div>
