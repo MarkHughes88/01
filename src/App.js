@@ -17,6 +17,7 @@ class App extends React.Component {
       userBox: {
         userBoxActive: false
       },
+      currentPage: 'home',
       activeUser: {
         id: '0001',
         name: 'Mark',
@@ -50,13 +51,20 @@ class App extends React.Component {
     })
   }
 
-  selectUser(id) {
+  selectUser(selectedUserid) {
     this.setState({
       SelectedUser: {
-        id: id
+        id: selectedUserid
       }
-    })
-    console.log(this.state.SelectedUser.id)
+    });
+    console.log('selected user id is ' + this.state.SelectedUser.id)
+  }
+
+  changePage(page) {
+    this.setState({
+      currentPage: page
+    });
+    console.log('current page is ' + this.state.currentPage)
   }
 
   render() {
@@ -66,9 +74,10 @@ class App extends React.Component {
           sliderActive={ this.state.sliderActive }
           sliderContent={ this.state.sliderContent }
           sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
+          changePage={ (page) => this.changePage(page) }
           userBoxState={ () => this.setUserBoxState() }
           users={ this.state.users }
-          selectUser={ (id) => this.selectUser(id) }
+          selectUser={ (selectedUserid) => this.selectUser(selectedUserid) }
         />
         <Pages
           sliderActive={ this.state.sliderActive }

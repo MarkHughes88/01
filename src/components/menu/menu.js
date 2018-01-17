@@ -26,6 +26,7 @@ class Menu extends React.Component {
 					text={ link.text }
 					url={ link.url }
 					toggleSlider={ (text) => this.toggleSlider(text) }
+					changePage={ (page) => this.props.changePage(page) }
 				/>
 			)
 		});
