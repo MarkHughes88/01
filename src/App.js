@@ -25,7 +25,7 @@ class App extends React.Component {
         role: 'Admin',
         email: 'mark@myemail.com'
       },
-      SelectedUser: {
+      selectedUser: {
         id: undefined,
         name: undefined,
         userName: undefined,
@@ -37,6 +37,18 @@ class App extends React.Component {
     this.selectUser = this.selectUser.bind(this);
 	}
 
+  componentWillUpdate(nextProps, nextState) {
+    console.log(nextState.selectedUser.id)
+  }
+
+  componentDidUpdate(newProps, newState) {
+    if(this.state.currentPage !== newState.currentPage) {
+      console.log('Page has changed!', newState.currentPage)
+    }
+    if(this.state.selectedUser !== newState.selectedUser) {
+      console.log('User has changed!', newState.selectedUser.id)
+    }
+  }
 
   setSliderState(sliderActive, sliderContent) {
     this.setState({
@@ -53,18 +65,16 @@ class App extends React.Component {
 
   selectUser(selectedUserid) {
     this.setState({
-      SelectedUser: {
+      selectedUser: {
         id: selectedUserid
       }
     });
-    console.log('selected user id is ' + this.state.SelectedUser.id)
   }
 
   changePage(page) {
     this.setState({
       currentPage: page
     });
-    console.log('current page is ' + this.state.currentPage)
   }
 
   render() {
