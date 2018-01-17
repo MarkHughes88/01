@@ -54,7 +54,7 @@ class Users extends React.Component {
 										<label htmlFor='role'>Role</label>
 									</div>
 									<div className='col-sm-8'>
-										<select className="form-control" id="role" defaultValue={ user.role }>
+										<select className="form-control" id="role" value={ user.role } onChange={() => {}}>
 								      <option>Admin</option>
 								      <option>Editor</option>
 								      <option>User</option>

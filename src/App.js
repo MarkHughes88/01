@@ -14,29 +14,25 @@ class App extends React.Component {
       // console.group('App.js');
 
       this.state = {
-          slider: {
-              sliderActive: false,
-              sliderContent: null
-          },
-          userBox: {
-              userBoxActive: false
-          },
-          currentPage: 'home',
-          activeUser: {
-              id: '0001',
-              name: 'Mark',
-              userName: 'MarkHughes88',
-              role: 'Admin',
-              email: 'mark@myemail.com'
-          },
-          selectedUser: {
-              id: undefined,
-              name: undefined,
-              userName: undefined,
-              role: undefined,
-              email: undefined
-          },
-          users: UserData.Users || {} // <-- fallback incase users dont load
+        slider: {
+          sliderActive: false,
+          sliderContent: null
+        },
+        userBox: {
+          userBoxActive: false
+        },
+        currentPage: 'home',
+        activeUser: {
+          id: '0001',
+          name: 'Mark',
+          userName: 'MarkHughes88',
+          role: 'Admin',
+          email: 'mark@myemail.com'
+        },
+        selectedUser: {
+          id: undefined
+        },
+        users: UserData.Users || {} // <-- fallback incase users dont load
       }
 
       this.selectUser = this.selectUser.bind(this);
@@ -68,6 +64,12 @@ class App extends React.Component {
     }
   }
 
+  closeSlider() {
+    this.setState({
+      sliderActive: false
+    })
+  }
+
   setUserBoxState() {
     this.setState({
       userBoxActive: !this.state.userBoxActive
@@ -93,6 +95,7 @@ class App extends React.Component {
       <div className="App">
         <Menu
           sliderActive={ this.state.sliderActive }
+          closeSlider={ () => this.closeSlider() }
           sliderContent={ this.state.sliderContent }
           sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
           changePage={ (page) => this.changePage(page) }

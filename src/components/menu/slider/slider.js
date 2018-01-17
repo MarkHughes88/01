@@ -9,15 +9,20 @@ class Slider extends React.Component {
 	renderSwitch(content) {
 		switch(content) {
 			case 'Content':
-				return <Content />;
+				return <Content
+						closeSlider={ this.props.closeSlider }
+					/>;
 			case 'Media':
-				return <Media />;
+				return <Media
+						closeSlider={ this.props.closeSlider }
+					/>;
 			case 'Users':
 				return <Users
 					users={ this.props.users }
 					selectedUser={ this.props.selectedUser }
 					pageState={ this.props.pageState }
 					changePage={ this.props.changePage }
+					closeSlider={ this.props.closeSlider }
 				/>;
 			default:
 				return null;

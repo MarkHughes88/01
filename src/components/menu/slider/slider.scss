@@ -39,6 +39,15 @@
 	color: $menu-slider-header-color;
 	padding: $menu-slider-header-padding;
 	height: $menu-slider-header-height;
+	position: relative;
+}
+
+.slider__header__close {
+	position: absolute;
+	right: $padding;
+	top: 50%;
+	@include translate(0, -50%);
+	cursor: pointer;
 }
 
 .menu__slider__content {

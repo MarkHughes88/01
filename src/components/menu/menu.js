@@ -48,6 +48,7 @@ class Menu extends React.Component {
 						selectedUser={ this.props.selectedUser }
 						pageState={ this.props.pageState }
 						changePage={ this.props.changePage }
+						closeSlider={ this.props.closeSlider }
 					/>
 				</div>
 			</div>
