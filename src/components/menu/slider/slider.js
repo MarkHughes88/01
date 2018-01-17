@@ -15,8 +15,9 @@ class Slider extends React.Component {
 			case 'Users':
 				return <Users
 					users={ this.props.users }
-					selectUser={ this.props.selectUser }
+					selectedUser={ this.props.selectedUser }
 					pageState={ this.props.pageState }
+					changePage={ this.props.changePage }
 				/>;
 			default:
 				return null;

@@ -8,48 +8,58 @@ import UserData from './data/users.json';
 
 class App extends React.Component {
   constructor(props) {
-		super(props);
-		this.state = {
-			slider: {
-				sliderActive: false,
-				sliderContent: null
-			},
-      userBox: {
-        userBoxActive: false
-      },
-      currentPage: 'home',
-      activeUser: {
-        id: '0001',
-        name: 'Mark',
-        userName: 'MarkHughes88',
-        role: 'Admin',
-        email: 'mark@myemail.com'
-      },
-      selectedUser: {
-        id: undefined
-      },
-      users: UserData.Users
-		}
-    this.selectUser = this.selectUser.bind(this);
+      super(props);
+
+      // Start console group for this render()
+      // console.group('App.js');
+
+      this.state = {
+          slider: {
+              sliderActive: false,
+              sliderContent: null
+          },
+          userBox: {
+              userBoxActive: false
+          },
+          currentPage: 'home',
+          activeUser: {
+              id: '0001',
+              name: 'Mark',
+              userName: 'MarkHughes88',
+              role: 'Admin',
+              email: 'mark@myemail.com'
+          },
+          selectedUser: {
+              id: undefined,
+              name: undefined,
+              userName: undefined,
+              role: undefined,
+              email: undefined
+          },
+          users: UserData.Users || {} // <-- fallback incase users dont load
+      }
+
+      this.selectUser = this.selectUser.bind(this);
 	}
 
-  componentWillUpdate(nextProps, nextState) {
+/**  componentWillUpdate(nextProps, nextState) {
     if(nextState.selectedUser !== this.state.selectedUser) {
-      console.log('next user state is ' + nextState.selectedUser.id)
+      console.log('componentWillUpdate', 'Updating User to ' + nextState.selectedUser.id)
     }
   }
 
- componentDidUpdate(newProps, newState) {
-    if(this.state.selectedUser !== newState.selectedUser) {
-      console.log('User has changed!', newState.selectedUser.id)
+ componentDidUpdate(prevProps, prevState) {
+    if(this.state.selectedUser !== prevState.selectedUser) {
+      console.log('componentDidUpdate', 'User has updated to ' + this.state.selectedUser.id + ' from ' + prevState.selectedUser.id);
     }
-  }
+
+    // End console group for this render()
+    console.groupEnd();
+  } **/
 
   setSliderState(sliderActive, sliderContent) {
     if(sliderContent === 'Home' || sliderContent === 'Help') {
-      this.setState({
-        sliderActive: false
-      })
+      return;
     } else {
       this.setState({
        sliderActive,
@@ -70,6 +80,8 @@ class App extends React.Component {
         id: selectedUserid
       }
     });
+
+    console.log(selectedUserid)
   }
 
   changePage(page) {
@@ -89,7 +101,7 @@ class App extends React.Component {
           pageState={ this.state.currentPage }
           userBoxState={ () => this.setUserBoxState() }
           users={ this.state.users }
-          selectUser={ (selectedUserid) => this.selectUser(selectedUserid) }
+          selectedUser={ (selectedUserid) => this.selectUser(selectedUserid) }
         />
         <Pages
           sliderActive={ this.state.sliderActive }

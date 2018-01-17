@@ -17,11 +17,22 @@
 	margin-top: 0px !important;
 }
 
+.user-list__item__name {
+	&:hover {
+		cursor: pointer;
+		color: $font-link;
+		text-decoration: underline;
+	}
+}
+
 .user-list__item__buttons {
 	float: right;
 	text-align: right;
+}
 
+.user-list__item__buttons__edit {
 	&:hover {
 		cursor: pointer;
+		color: $font-link;
 	}
 }

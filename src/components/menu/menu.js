@@ -45,7 +45,9 @@ class Menu extends React.Component {
 					<Slider
 						content={ this.props.sliderContent }
 						users={ this.props.users }
-						selectUser={ this.props.selectUser }
+						selectedUser={ this.props.selectedUser }
+						pageState={ this.props.pageState }
+						changePage={ this.props.changePage }
 					/>
 				</div>
 			</div>

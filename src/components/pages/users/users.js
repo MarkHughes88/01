@@ -2,12 +2,15 @@ import React from 'react';
 
 class Users extends React.Component {
 	render() {
-		console.log(this.props.users)
+		var user = this.props.users[this.props.selectedUser]
+
+		console.log(user)
+
 		return (
 			<div className='container-fluid'>
 				<div className='row'>
 					<div className='container-fluid'>
-						<h1>User Name</h1>
+						<h1>User Details - { user.name }</h1>
 					</div>
 				</div>
 				<div className='row'>
@@ -20,7 +23,7 @@ class Users extends React.Component {
 										<label htmlFor="name">Name</label>
 									</div>
 									<div className='col-sm-8'>
-										<input type="text" className="form-control" id="name" />
+										<input type="text" className="form-control" id="name" placeholder={ user.name }/>
 									</div>
 								</div>
 						  </div>
@@ -31,7 +34,7 @@ class Users extends React.Component {
 										<label htmlFor="userName">Username</label>
 									</div>
 									<div className='col-sm-8'>
-										<input type="text" className="form-control" id="userName" />
+										<input type="text" className="form-control" id="userName" placeholder={ user.username } />
 									</div>
 								</div>
 						  </div>
@@ -42,7 +45,7 @@ class Users extends React.Component {
 										<label htmlFor="email">Email</label>
 									</div>
 									<div className='col-sm-8'>
-										<input type="email" className="form-control" id="email" />
+										<input type="email" className="form-control" id="email" placeholder={ user.email } />
 									</div>
 								</div>
 						  </div>
@@ -53,7 +56,7 @@ class Users extends React.Component {
 										<label htmlFor='role'>Role</label>
 									</div>
 									<div className='col-sm-8'>
-										<select className="form-control" id="role">
+										<select className="form-control" id="role" defaultValue={ user.role }>
 								      <option>Admin</option>
 								      <option>Editor</option>
 								      <option>User</option>

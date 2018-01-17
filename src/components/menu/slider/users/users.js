@@ -2,10 +2,6 @@ import React from 'react';
 import './users.scss';
 
 class Users extends React.Component {
-	editUser = (user) => {
-		this.props.selectUser(user.id);
-		console.log(this.props.pageState)
-	}
 
 	render() {
 		return (
@@ -25,11 +21,22 @@ class Users extends React.Component {
 									if (user.role === 'Admin') {
 										return <li key={ user.id } className='user-list__item'>
 											<span className='fa fa-user'></span> &nbsp;
-											<span className='user-list__item__name'>{ user.username }</span>
+											<span
+												className='user-list__item__name'
+												onClick={ () => {
+														this.props.selectedUser(user.id);
+														this.props.changePage('Users');
+													}
+												}
+											>{ user.username }</span>
 											<span className='user-list__item__buttons'>
 											<span
-												className='fa fa-pencil'
-												onClick={ this.editUser }
+												className='fa fa-pencil user-list__item__buttons__edit'
+												onClick={ () => {
+														this.props.selectedUser(user.id);
+														this.props.changePage('Users');
+													}
+												}
 											></span>
 											&nbsp;
 											<span className='fa fa-trash'></span>
@@ -44,11 +51,22 @@ class Users extends React.Component {
 									if (user.role === 'Editor') {
 										return <li key={ user.id } className='user-list__item'>
 											<span className='fa fa-user'></span> &nbsp;
-											<span className='user-list__item__name'>{ user.username }</span>
+												<span
+													className='user-list__item__name'
+													onClick={ () => {
+															this.props.selectedUser(user.id);
+															this.props.changePage('Users');
+														}
+													}
+												>{ user.username }</span>
 											<span className='user-list__item__buttons'>
 												<span
-													className='fa fa-pencil'
-													onClick={ (id) => this.props.selectUser(user.id) }
+													className='fa fa-pencil user-list__item__buttons__edit'
+													onClick={ () => {
+															this.props.selectedUser(user.id);
+															this.props.changePage('Users');
+														}
+													}
 												></span>
 												&nbsp;
 												<span className='fa fa-trash'></span>
@@ -63,11 +81,22 @@ class Users extends React.Component {
 									if (user.role === 'User') {
 										return <li key={ user.id } className='user-list__item'>
 											<span className='fa fa-user'></span> &nbsp;
-											<span className='user-list__item__name'>{ user.username }</span>
+												<span
+													className='user-list__item__name'
+													onClick={ () => {
+															this.props.selectedUser(user.id);
+															this.props.changePage('Users');
+														}
+													}
+												>{ user.username }</span>
 											<span className='user-list__item__buttons'>
 												<span
-													className='fa fa-pencil'
-													onClick={ (id) => this.props.selectUser(user.id) }
+													className='fa fa-pencil user-list__item__buttons__edit'
+													onClick={ () => {
+															this.props.selectedUser(user.id);
+															this.props.changePage('Users');
+														}
+													}
 												></span>
 												&nbsp;
 												<span className='fa fa-trash'></span>
