@@ -4,8 +4,6 @@ class Users extends React.Component {
 	render() {
 		var user = this.props.users[this.props.selectedUser]
 
-		console.log(user)
-
 		return (
 			<div className='container-fluid'>
 				<div className='row pages__header'>

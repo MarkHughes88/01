@@ -80,8 +80,6 @@ class App extends React.Component {
         id: selectedUserid
       }
     });
-
-    console.log(selectedUserid)
   }
 
   changePage(page) {

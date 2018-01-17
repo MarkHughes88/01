@@ -33,6 +33,8 @@
 .user-list__item__buttons__edit {
 	&:hover {
 		cursor: pointer;
-		color: $font-link;
+		color: $icon-hover-color;
+		@include scale($icon-hover-scale);
+		@include transition(all, ease, .2s);
 	}
 }
