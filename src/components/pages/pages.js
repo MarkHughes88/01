@@ -18,7 +18,9 @@ class Pages extends React.Component {
 			case 'Media':
 				return <Media />
 			case 'Users':
-				return <Users />
+				return <Users
+						selectedUser={ this.props.selectedUser }
+					/>
 			case 'Help':
 				return <Help />
 			default:
@@ -27,6 +29,7 @@ class Pages extends React.Component {
 	}
 
 	render() {
+		console.log(this.props.selectedUser);
 		return (
 			/** <Router>
 				<div className={`pages ${this.props.sliderActive ? 'pages--margin' : null }`}>

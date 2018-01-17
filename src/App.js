@@ -37,23 +37,17 @@ class App extends React.Component {
     this.selectUser = this.selectUser.bind(this);
 	}
 
-/**  componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate(nextProps, nextState) {
     if(nextState.selectedUser !== this.state.selectedUser) {
       console.log('next user state is ' + nextState.selectedUser.id)
     }
-    if(nextState.currentPage !== this.state.currentPage) {
-      console.log('next page state is ' + nextState.currentPage)
-    }
   }
 
-  componentDidUpdate(newProps, newState) {
-    if(this.state.currentPage !== newState.currentPage) {
-      console.log('Page has changed!', newState.currentPage)
-    }
+ componentDidUpdate(newProps, newState) {
     if(this.state.selectedUser !== newState.selectedUser) {
       console.log('User has changed!', newState.selectedUser.id)
     }
-  } **/
+  }
 
   setSliderState(sliderActive, sliderContent) {
     if(sliderContent === 'Home' || sliderContent === 'Help') {
@@ -104,6 +98,7 @@ class App extends React.Component {
           sliderActive={ this.state.sliderActive }
           changePage={ (page) => this.changePage(page) }
           pageState={ this.state.currentPage }
+          selectedUser={ this.state.selectedUser }
         />
         <UserBox
           userBoxActive={ this.state.userBoxActive }
