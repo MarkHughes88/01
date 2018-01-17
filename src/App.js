@@ -118,6 +118,7 @@ class App extends React.Component {
           activeUserRole={ this.state.activeUser.role }
           activeUserEmail={ this.state.activeUser.email }
         />
+        <div className='container-fluid pages__header pages__header--fallback'></div>
       </div>
     );
   }

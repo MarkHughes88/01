@@ -25,7 +25,7 @@ class Pages extends React.Component {
 			case 'Help':
 				return <Help />
 			default:
-				return null;
+				return <Home />;
 		}
 	}
 
