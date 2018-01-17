@@ -20,4 +20,8 @@
 .user-list__item__buttons {
 	float: right;
 	text-align: right;
+
+	&:hover {
+		cursor: pointer;
+	}
 }

@@ -4,13 +4,15 @@ import './links.scss';
 class Links extends React.Component {
 	onClick = () => {
 		this.props.toggleSlider(this.props.text);
-		this.props.changePage(this.props.text);
+		if(this.props.text === 'Home' || this.props.text === 'Help') {
+			this.props.changePage(this.props.text);
+		}
 	}
 
 	render() {
 		return (
 			<a
-				href={ this.props.text === 'Home' || this.props.text === 'Help' ?  this.props.url : null }
+				/** href={ this.props.text === 'Home' || this.props.text === 'Help' ?  this.props.url : null } **/
 				className='menu__bar__links__item'
 				onClick={this.onClick}
 			>
