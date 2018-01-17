@@ -20,6 +20,7 @@ class Pages extends React.Component {
 			case 'Users':
 				return <Users
 						selectedUser={ this.props.selectedUser }
+						users={ this.props.users }
 					/>
 			case 'Help':
 				return <Help />
@@ -29,7 +30,6 @@ class Pages extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.selectedUser);
 		return (
 			/** <Router>
 				<div className={`pages ${this.props.sliderActive ? 'pages--margin' : null }`}>

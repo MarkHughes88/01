@@ -26,11 +26,7 @@ class App extends React.Component {
         email: 'mark@myemail.com'
       },
       selectedUser: {
-        id: undefined,
-        name: undefined,
-        userName: undefined,
-        role: undefined,
-        email: undefined
+        id: undefined
       },
       users: UserData.Users
 		}
@@ -90,6 +86,7 @@ class App extends React.Component {
           sliderContent={ this.state.sliderContent }
           sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
           changePage={ (page) => this.changePage(page) }
+          pageState={ this.state.currentPage }
           userBoxState={ () => this.setUserBoxState() }
           users={ this.state.users }
           selectUser={ (selectedUserid) => this.selectUser(selectedUserid) }
@@ -98,7 +95,8 @@ class App extends React.Component {
           sliderActive={ this.state.sliderActive }
           changePage={ (page) => this.changePage(page) }
           pageState={ this.state.currentPage }
-          selectedUser={ this.state.selectedUser }
+          selectedUser={ this.state.selectedUser.id }
+          users={ this.state.users }
         />
         <UserBox
           userBoxActive={ this.state.userBoxActive }

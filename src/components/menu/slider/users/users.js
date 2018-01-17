@@ -2,6 +2,11 @@ import React from 'react';
 import './users.scss';
 
 class Users extends React.Component {
+	editUser = (user) => {
+		this.props.selectUser(user.id);
+		console.log(this.props.pageState)
+	}
+
 	render() {
 		return (
 			<div className='row'>
@@ -24,7 +29,7 @@ class Users extends React.Component {
 											<span className='user-list__item__buttons'>
 											<span
 												className='fa fa-pencil'
-												onClick={ (id) => this.props.selectUser(user.id) }
+												onClick={ this.editUser }
 											></span>
 											&nbsp;
 											<span className='fa fa-trash'></span>

@@ -16,6 +16,7 @@ class Slider extends React.Component {
 				return <Users
 					users={ this.props.users }
 					selectUser={ this.props.selectUser }
+					pageState={ this.props.pageState }
 				/>;
 			default:
 				return null;

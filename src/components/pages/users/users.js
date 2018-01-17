@@ -2,6 +2,7 @@ import React from 'react';
 
 class Users extends React.Component {
 	render() {
+		console.log(this.props.users)
 		return (
 			<div className='container-fluid'>
 				<div className='row'>
