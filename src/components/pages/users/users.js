@@ -8,12 +8,12 @@ class Users extends React.Component {
 
 		return (
 			<div className='container-fluid'>
-				<div className='row'>
+				<div className='row pages__header'>
 					<div className='container-fluid'>
 						<h1>User Details - { user.name }</h1>
 					</div>
 				</div>
-				<div className='row'>
+				<div className='row pages__content'>
 					<div className='col-md-6'>
 						<form>
 
@@ -64,6 +64,12 @@ class Users extends React.Component {
 									</div>
 								</div>
 						  </div>
+
+							<div className='row'>
+								<div className='container-fluid text-right'>
+									<a className='btn button button-primary'>Save Changes</a>
+								</div>
+							</div>
 
 						</form>
 					</div>

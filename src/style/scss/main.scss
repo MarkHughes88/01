@@ -10,7 +10,7 @@
 
 .button-primary {
 	background-color: $button-primary-background;
-	color: $font-white;
+	color: $font-white !important;
 
 	&:hover {
 		background-color: darken($button-primary-background, 10%);
@@ -31,6 +31,12 @@
 .form-control {
 	height: 44px !important;
 	border: 1px solid $border-color;
+}
+
+label {
+	height: 44px !important;
+	line-height: 44px;
+	font-weight: bold;
 }
 
 .button-dropdown {

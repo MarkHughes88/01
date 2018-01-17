@@ -4,7 +4,6 @@
 	display: inline-block;
 	position: absolute;
 	width: calc(100vw - #{$menu-width});
-	padding: $padding;
 	@include transition(all, ease, .5s);
 }
 
@@ -12,4 +11,14 @@
 	margin-left: $menu-slider-width;
 	width: calc(100vw - (#{$menu-slider-width} + #{$menu-width}));
 	@include transition(margin, ease, .5s);
+}
+
+.pages__header {
+	height: $pages-header-height;
+	background-color: $pages-header-background;
+	padding: $padding;
+}
+
+.pages__content {
+	padding: $padding-xl $padding;
 }
