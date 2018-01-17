@@ -20,9 +20,9 @@ class Users extends React.Component {
 						<div className='menu__slider__content container-fluid'>
 							<ul className='user-list'>
 
-								<li className='user-list__title'>Admins</li>
+								<li className='user-list__title'>Administrators</li>
 								{this.props.users.map(function(user, id, username, role) {
-									if (user.role === 'Admin') {
+									if (user.role === 'Administrator') {
 										return <li key={ user.id } className='user-list__item'>
 											<span className='fa fa-user'></span> &nbsp;
 											<span

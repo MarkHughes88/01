@@ -4,7 +4,7 @@
 			"id":						"0",
 			"name":					"Mark",
 			"username": 		"MarkHughes88",
-			"role": 				"Admin",
+			"role": 				"Administrator",
 			"email":				"mark@myemail.com"
 		},
 		{
@@ -18,7 +18,7 @@
 			"id":						"2",
 			"name":					"Thomas",
 			"username": 		"Nothadoth",
-			"role": 				"Admin",
+			"role": 				"Administrator",
 			"email":				"thomas@myemail.com"
 		},
 		{

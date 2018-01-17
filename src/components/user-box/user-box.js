@@ -30,6 +30,9 @@ class UserBox extends React.Component {
 					activeUserRole={ this.props.activeUserRole }
 					activeUserEmail={ this.props.activeUserEmail }
 					toggleLogout={ () => this.toggleLogout() }
+					selectedUser={ this.state.selectedUser }
+					activeUser={ this.state.activeUser }
+					changePage={ (page) => this.changePage(page) }
 				/>;
 			default: { this.renderSwitch(false) }
 		}

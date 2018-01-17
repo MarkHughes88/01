@@ -37,7 +37,13 @@ class UserDetails extends React.Component {
 					</div>
 					<div className='row'>
 						<div className='col-sm-6'>
-							<a href='/users' className='btn button button-primary btn-block'>Edit details</a>
+							<a
+								className='btn button button-primary btn-block'
+								onClick={ () => {
+										this.props.changePage('Users');
+									}
+								}
+							>Edit details</a>
 						</div>
 						<div className='col-sm-6'>
 							<button

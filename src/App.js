@@ -23,10 +23,10 @@ class App extends React.Component {
         },
         currentPage: 'home',
         activeUser: {
-          id: '0001',
+          id: '0',
           name: 'Mark',
           userName: 'MarkHughes88',
-          role: 'Admin',
+          role: 'Administrator',
           email: 'mark@myemail.com'
         },
         selectedUser: {
@@ -117,6 +117,9 @@ class App extends React.Component {
           activeUserName={ this.state.activeUser.userName }
           activeUserRole={ this.state.activeUser.role }
           activeUserEmail={ this.state.activeUser.email }
+          selectedUser={ this.state.selectedUser.id }
+          activeUser={ this.state.activeUser.id }
+          changePage={ (page) => this.changePage(page) }
         />
         <div className='container-fluid pages__header pages__header--fallback'></div>
       </div>
