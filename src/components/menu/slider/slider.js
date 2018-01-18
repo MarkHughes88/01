@@ -31,7 +31,7 @@ class Slider extends React.Component {
 
 	render() {
 		return (
-			<div className='container-fluid'>
+			<div>
 				{ this.renderSwitch(this.props.content) }
 			</div>
 		)

@@ -3,8 +3,7 @@ import React from 'react';
 class Media extends React.Component {
 	render() {
 		return (
-			<div className='row'>
-				<div className='container-fluid'>
+			<div>
 					<div className='row'>
 						<div className='container-fluid menu__slider__header'>
 							<h2>Media</h2>
@@ -19,7 +18,6 @@ class Media extends React.Component {
 
 						</div>
 					</div>
-				</div>
 			</div>
 		)
 	}

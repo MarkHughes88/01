@@ -4,8 +4,7 @@ import './users.scss';
 class Users extends React.Component {
 	render() {
 		return (
-			<div className='row'>
-				<div className='container-fluid'>
+			<div>
 					<div className='row'>
 						<div className='container-fluid menu__slider__header'>
 							<h2>Users</h2>
@@ -112,7 +111,6 @@ class Users extends React.Component {
 							</ul>
 						</div>
 					</div>
-				</div>
 			</div>
 		)
 	}

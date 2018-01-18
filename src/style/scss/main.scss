@@ -6,6 +6,10 @@
 	padding: $padding;
 }
 
+.row {
+	margin: 0 !important;
+}
+
 // Button Styles
 .button {
 	@include border-radius($button-border-radius);

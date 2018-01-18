@@ -80,7 +80,7 @@ class Users extends React.Component {
 							 	 <div className='row'>
 							 		 <div className='container-fluid'>
 							 			 <div className='row'>
-							 				 <div className='container-fluid text-right'>
+							 				 <div className='container-fluid text-right user-details__button-container'>
 							 					 <a className='btn button button-primary'>Save Changes</a>
 							 				 </div>
 							 			 </div>
