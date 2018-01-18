@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Media extends React.Component {
+class SliderMedia extends React.Component {
 	render() {
 		return (
 			<div>
@@ -23,4 +23,4 @@ class Media extends React.Component {
 	}
 }
 
-export default Media;
+export default SliderMedia;

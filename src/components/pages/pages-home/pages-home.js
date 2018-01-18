@@ -1,7 +1,7 @@
 import React from 'react';
-import './home.scss';
+import './pages-home.scss';
 
-class Home extends React.Component {
+class PagesHome extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -15,8 +15,6 @@ class Home extends React.Component {
 	}
 
 	render () {
-		let activeUser = this.props.users[this.props.activeUser];
-
 		return (
 			<div>
 				<div className='row pages__header'>
@@ -108,4 +106,4 @@ class Home extends React.Component {
 	}
 }
 
-export default Home;
+export default PagesHome;

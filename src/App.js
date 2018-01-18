@@ -16,7 +16,7 @@ class App extends React.Component {
       this.state = {
         slider: {
           sliderActive: false,
-          sliderContent: null
+          sliderContent: undefined
         },
         userBox: {
           userBoxActive: false
@@ -38,15 +38,15 @@ class App extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    if(nextState.selectedUser !== this.state.selectedUser) {
+  /**  if(nextState.selectedUser !== this.state.selectedUser) {
       console.log('componentWillUpdate', 'Updating User to ' + nextState.selectedUser.id)
-    }
+    } **/
   }
 
  componentDidUpdate(prevProps, prevState) {
-    if(this.state.selectedUser !== prevState.selectedUser) {
+  /**  if(this.state.selectedUser !== prevState.selectedUser) {
       console.log('componentDidUpdate', 'User has updated to ' + this.state.selectedUser.id + ' from ' + prevState.selectedUser.id);
-    }
+    } **/
 
     // End console group for this render()
     console.groupEnd();
@@ -94,8 +94,8 @@ class App extends React.Component {
   setActiveUser() {
     this.setState({
       activeUser: {
-        id: this.state.users[1].id,
-        image: this.state.users[1].image
+        id: this.state.users[0].id,
+        image: this.state.users[0].image
       }
     })
   }

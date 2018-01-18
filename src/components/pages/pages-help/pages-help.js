@@ -1,12 +1,12 @@
 import React from 'react';
 
-class Content extends React.Component {
-	render() {
+class PagesHelp extends React.Component {
+	render () {
 		return (
-			<div className='container-fluid'>
+			<div>
 				<div className='row pages__header'>
 					<div className='container-fluid'>
-						<h1>Content</h1>
+						<h1>Help</h1>
 					</div>
 				</div>
 				<div className='row pages__content'>
@@ -19,4 +19,4 @@ class Content extends React.Component {
 	}
 }
 
-export default Content;
+export default PagesHelp;

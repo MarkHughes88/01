@@ -3,8 +3,8 @@ import React from 'react';
 import './menu.scss';
 
 import Data from '../../data/menu.json';
-import User from './user/user';
-import Link from './links/links';
+import User from './menu-user/menu-user';
+import Link from './menu-links/menu-links';
 import Slider from './slider/slider';
 
 class Menu extends React.Component {

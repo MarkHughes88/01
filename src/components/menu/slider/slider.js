@@ -1,9 +1,9 @@
 import React from 'react';
 import './slider.scss';
 
-import Content from './content/content';
-import Media from './media/media';
-import Users from './users/users';
+import Content from './slider-content/slider-content';
+import Media from './slider-media/slider-media';
+import Users from './slider-users/slider-users';
 
 class Slider extends React.Component {
 	renderSwitch(content) {

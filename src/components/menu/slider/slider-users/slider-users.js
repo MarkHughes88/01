@@ -1,7 +1,7 @@
 import React from 'react';
-import './users.scss';
+import './slider-users.scss';
 
-class Users extends React.Component {
+class SliderUsers extends React.Component {
 	render() {
 		return (
 			<div>
@@ -116,4 +116,4 @@ class Users extends React.Component {
 	}
 }
 
-export default Users;
+export default SliderUsers;

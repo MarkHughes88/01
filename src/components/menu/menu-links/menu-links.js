@@ -1,7 +1,7 @@
 import React from 'react';
-import './links.scss';
+import './menu-links.scss';
 
-class Links extends React.Component {
+class MenuLinks extends React.Component {
 	onClick = () => {
 		this.props.toggleSlider(this.props.text);
 		if(this.props.text === 'Home' || this.props.text === 'Help') {
@@ -25,4 +25,4 @@ class Links extends React.Component {
 	}
 }
 
-export default Links;
+export default MenuLinks;

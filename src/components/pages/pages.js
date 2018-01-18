@@ -2,11 +2,11 @@ import React from 'react';
 import './pages.scss';
 /* import { BrowserRouter as Router, Route } from 'react-router-dom'; */
 
-import Home from './home/home';
-import Content from './content/content';
-import Media from './media/media';
-import Users from './users/users';
-import Help from './help/help';
+import Home from './pages-home/pages-home';
+import Content from './pages-content/pages-content';
+import Media from './pages-media/pages-media';
+import Users from './pages-users/pages-users';
+import Help from './pages-help/pages-help';
 
 class Pages extends React.Component {
 	renderPageSwitch(page) {

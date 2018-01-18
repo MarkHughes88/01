@@ -1,12 +1,12 @@
 import React from 'react';
 
-class Media extends React.Component {
+class PagesContent extends React.Component {
 	render() {
 		return (
 			<div className='container-fluid'>
 				<div className='row pages__header'>
 					<div className='container-fluid'>
-						<h1>Media</h1>
+						<h1>Content</h1>
 					</div>
 				</div>
 				<div className='row pages__content'>
@@ -19,4 +19,4 @@ class Media extends React.Component {
 	}
 }
 
-export default Media;
+export default PagesContent;

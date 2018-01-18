@@ -1,7 +1,7 @@
 import React from 'react';
-import './user.scss';
+import './menu-user.scss';
 
-class User extends React.Component {
+class MenuUser extends React.Component {
 	render() {
 		return (
 			<div className='menu__user'>
@@ -15,4 +15,4 @@ class User extends React.Component {
 	}
 }
 
-export default User;
+export default MenuUser;
