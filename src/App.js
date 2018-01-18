@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Login from './components/login/login';
 import Menu from './components/menu/menu';
 import Pages from './components/pages/pages';
 import UserBox from './components/user-box/user-box';
@@ -22,6 +23,7 @@ class App extends React.Component {
           userBoxActive: false
         },
         currentPage: 'home',
+        loggedIn: false,
         activeUser: {
           id: undefined,
           image: undefined,
@@ -109,39 +111,47 @@ class App extends React.Component {
   }
 
   render() {
+    const isLoggedIn = this.state.loggedIn;
+
     return (
       <div className="App">
-        <Menu
-          sliderActive={ this.state.sliderActive }
-          closeSlider={ () => this.closeSlider() }
-          sliderContent={ this.state.sliderContent }
-          sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
-          changePage={ (page) => this.changePage(page) }
-          pageState={ this.state.currentPage }
-          userBoxState={ () => this.setUserBoxState() }
-          users={ this.state.users }
-          activeUser={ this.state.activeUser.id }
-          activeUserImage={ this.state.activeUser.image }
-          selectedUser={ (selectedUserid) => this.selectUser(selectedUserid) }
-        />
-        <Pages
-          sliderActive={ this.state.sliderActive }
-          changePage={ (page) => this.changePage(page) }
-          pageState={ this.state.currentPage }
-          selectedUser={ this.state.selectedUser.id }
-          activeUser={ this.state.activeUser.id }
-          users={ this.state.users }
-        />
-        <UserBox
-          userBoxActive={ this.state.userBoxActive }
-          userBoxState={ () => this.setUserBoxState() }
-          users={ this.state.users }
-          activeUser={ this.state.activeUser.id }
-          activeUserImage={ this.state.activeUser.image }
-          editUser={ (activeUser) => { this.userBoxEditUser(activeUser) } }
-          changePage={ (page) => this.changePage(page) }
-        />
-        <div className='container-fluid pages__header pages__header--fallback'></div>
+        { isLoggedIn ?
+          <div>
+            <Menu
+              sliderActive={ this.state.sliderActive }
+              closeSlider={ () => this.closeSlider() }
+              sliderContent={ this.state.sliderContent }
+              sliderState={ (sliderActive, sliderContent) => this.setSliderState(sliderActive, sliderContent) }
+              changePage={ (page) => this.changePage(page) }
+              pageState={ this.state.currentPage }
+              userBoxState={ () => this.setUserBoxState() }
+              users={ this.state.users }
+              activeUser={ this.state.activeUser.id }
+              activeUserImage={ this.state.activeUser.image }
+              selectedUser={ (selectedUserid) => this.selectUser(selectedUserid) }
+            />
+            <Pages
+              sliderActive={ this.state.sliderActive }
+              changePage={ (page) => this.changePage(page) }
+              pageState={ this.state.currentPage }
+              selectedUser={ this.state.selectedUser.id }
+              activeUser={ this.state.activeUser.id }
+              users={ this.state.users }
+            />
+            <UserBox
+              userBoxActive={ this.state.userBoxActive }
+              userBoxState={ () => this.setUserBoxState() }
+              users={ this.state.users }
+              activeUser={ this.state.activeUser.id }
+              activeUserImage={ this.state.activeUser.image }
+              editUser={ (activeUser) => { this.userBoxEditUser(activeUser) } }
+              changePage={ (page) => this.changePage(page) }
+            />
+            <div className='container-fluid pages__header pages__header--fallback'></div>
+          </div>
+          :
+          <Login />
+         }
       </div>
     );
   }
