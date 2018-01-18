@@ -2,14 +2,16 @@ import React from 'react';
 
 class UserDetails extends React.Component {
 	render() {
-		var activeUser = this.props.users[this.props.activeUser]
+		let activeUser = this.props.users[this.props.activeUser]
 
 		return (
 			<div className='row'>
 				<div className='container-fluid user-box__content'>
 					<div className='row'>
 						<div className='container-fluid text-center'>
-							<span className='user-box__content__icon rounded-circle'></span>
+							<span className='user-box__content__icon rounded-circle' style={{
+									backgroundImage: `url(${ this.props.activeUserImage })`
+								}}></span>
 							<h3>Welcome { activeUser.username }</h3>
 						</div>
 					</div>

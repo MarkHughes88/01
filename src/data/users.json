@@ -5,70 +5,80 @@
 			"name":					"Mark",
 			"username": 		"MarkHughes88",
 			"role": 				"Administrator",
-			"email":				"mark@myemail.com"
+			"email":				"mark@myemail.com",
+			"image": 				"http://agarioskins.com/submitted/useruploads/Rick%20sanchez.png"
 		},
 		{
 			"id":						"1",
 			"name":					"John",
 			"username": 		"JohnBoy",
 			"role": 				"Editor",
-			"email":				"john@myemail.com"
+			"email":				"john@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXpTpz2Z0BO3nzKAetMnp2pDjILnyw3fsKoRb0b9uqbXoXOG9QMQ"
 		},
 		{
 			"id":						"2",
 			"name":					"Thomas",
 			"username": 		"Nothadoth",
 			"role": 				"Administrator",
-			"email":				"thomas@myemail.com"
+			"email":				"thomas@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJKDmoEpCTjSY9WxSNvhIo6SzxfWaDmXuLMw26zf_1Kt2hLnIeA"
 		},
 		{
 			"id":						"3",
 			"name":					"Michael",
 			"username": 		"SpareHeadOne",
 			"role": 				"User",
-			"email":				"michael@myemail.com"
+			"email":				"michael@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwg_syVSycsp_5O-35QY5fvmGhJpowYarcCb_HZkPHXBjbd_6C"
 		},
 		{
 			"id":						"4",
 			"name":					"Christopher",
 			"username": 		"MelonHead",
 			"role": 				"User",
-			"email":				"christopher@myemail.com"
+			"email":				"christopher@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc_JvaZ0IGJbbcPNcwPtjOUEvRtBg-xGZSCrCrcuKF7W-jriIJyA"
 		},
 		{
 			"id":						"5",
 			"name":					"Claire",
 			"username": 		"CMurda",
 			"role": 				"User",
-			"email":				"claire@myemail.com"
+			"email":				"claire@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvhICSv0hYZYW0OlxPyY7PHzSDjb3NioXqC9BhDiuprMRg4EBgJQ"
 		},
 		{
 			"id":						"6",
 			"name":					"William",
 			"username": 		"Billybob",
 			"role": 				"User",
-			"email":				"william@myemail.com"
+			"email":				"william@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DVgx2wPXej1zhieqI9uArA2eEcZkSxYaY2aiN2SgSTIzH2bu"
 		},
 		{
 			"id":						"7",
 			"name":					"Tilly-mai",
 			"username": 		"TilMeister",
 			"role": 				"User",
-			"email":				"tilly@myemail.com"
+			"email":				"tilly@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRQWP50FTS-xBrczu5DbglmclP4Ui2fSi0-nOPhhhsuxnbRzsl8A"
 		},
 		{
 			"id":						"8",
 			"name":					"James",
 			"username": 		"Jimbob88",
 			"role": 				"User",
-			"email":				"james@myemail.com"
+			"email":				"james@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuReIw3Iw6mhQ9vFXO1XVgL1R10qCROG25XkEvsageo3QzuoKK"
 		},
 		{
 			"id":						"9",
 			"name":					"Peter",
 			"username": 		"MrMclaren",
 			"role": 				"User",
-			"email":				"peter@myemail.com"
+			"email":				"peter@myemail.com",
+			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBzCCt3TaL8qPRwPsD9xVMWiVIVeUjuzTqf3jw3UhXdSgttF5M"
 		}
 	]
 }

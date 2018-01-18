@@ -1,6 +1,13 @@
 @import '_var.scss';
 @import '_mixins.scss';
 
+.border {
+	border: 1px solid black;
+	padding: $padding;
+}
+
+
+
 // Button Styles
 .button {
 	@include border-radius($button-border-radius);

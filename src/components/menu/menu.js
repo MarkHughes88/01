@@ -36,6 +36,9 @@ class Menu extends React.Component {
 				<div className='menu__bar'>
 					<User
 						userBoxState={ this.props.userBoxState }
+						users={ this.props.users }
+						activeUser={ this.props.activeUser }
+						activeUserImage={ this.props.activeUserImage }
 					/>
 					<ul className='menu__bar__links'>
 						{ Links }

@@ -1,0 +1,31 @@
+@import '../../../style/scss/main.scss';
+
+.user-details {
+	background-color: $brand-light-grey;
+	padding: $padding;
+}
+
+.user-details__content {
+	width: 100%;
+}
+
+.image-container {
+	background-color: darken($brand-light-grey, 10%);
+}
+
+.image-container__image {
+	max-width: 200px;
+	display: block;
+	margin: auto;
+}
+
+.image-container__image__background {
+	width: 100%;
+	padding-top: 100%;
+	position: relative;
+	border: 5px solid black;
+	display: inline-block;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

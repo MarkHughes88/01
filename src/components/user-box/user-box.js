@@ -30,7 +30,9 @@ class UserBox extends React.Component {
 					users={ this.props.users }
 					editUser={ this.props.editUser }
 					activeUser={ this.props.activeUser }
+					activeUserImage={ this.props.activeUserImage }
 					changePage={ this.props.changePage }
+					userBoxState={ this.props.userBoxState }
 				/>;
 			default: { this.renderSwitch(false) }
 		}

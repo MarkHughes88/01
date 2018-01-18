@@ -11,7 +11,7 @@ class App extends React.Component {
       super(props);
 
       // Start console group for this render()
-      // console.group('App.js');
+      console.group('App.js');
 
       this.state = {
         slider: {
@@ -23,11 +23,8 @@ class App extends React.Component {
         },
         currentPage: 'home',
         activeUser: {
-          id: '0'
-  /**        name: 'Mark',
-          userName: 'MarkHughes88',
-          role: 'Administrator',
-          email: 'mark@myemail.com' **/
+          id: '0',
+          image: 'http://agarioskins.com/submitted/useruploads/Rick%20sanchez.png'
         },
         selectedUser: {
           id: undefined
@@ -41,7 +38,7 @@ class App extends React.Component {
       console.log('componentWillUpdate', 'Updating User to ' + nextState.selectedUser.id)
     }
   }
- /**
+
  componentDidUpdate(prevProps, prevState) {
     if(this.state.selectedUser !== prevState.selectedUser) {
       console.log('componentDidUpdate', 'User has updated to ' + this.state.selectedUser.id + ' from ' + prevState.selectedUser.id);
@@ -49,7 +46,7 @@ class App extends React.Component {
 
     // End console group for this render()
     console.groupEnd();
-  } **/
+  }
 
   setSliderState(sliderActive, sliderContent) {
     if(sliderContent === 'Home' || sliderContent === 'Help') {
@@ -92,7 +89,8 @@ class App extends React.Component {
 
   changePage(page) {
     this.setState({
-      currentPage: page
+      currentPage: page,
+      userBoxActive: false
     });
   }
 
@@ -108,6 +106,8 @@ class App extends React.Component {
           pageState={ this.state.currentPage }
           userBoxState={ () => this.setUserBoxState() }
           users={ this.state.users }
+          activeUser={ this.state.activeUser.id }
+          activeUserImage={ this.state.activeUser.image }
           selectedUser={ (selectedUserid) => this.selectUser(selectedUserid) }
         />
         <Pages
@@ -122,6 +122,7 @@ class App extends React.Component {
           userBoxState={ () => this.setUserBoxState() }
           users={ this.state.users }
           activeUser={ this.state.activeUser.id }
+          activeUserImage={ this.state.activeUser.image }
           editUser={ (activeUser) => { this.userBoxEditUser(activeUser) } }
           changePage={ (page) => this.changePage(page) }
         />

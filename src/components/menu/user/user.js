@@ -6,7 +6,9 @@ class User extends React.Component {
 		return (
 			<div className='menu__user'>
 				<a onClick={ this.props.userBoxState }>
-					<span className='menu__user__icon rounded-circle'></span>
+					<span className='menu__user__icon rounded-circle' style={{
+							backgroundImage: `url(${ this.props.activeUserImage })`
+						}}></span>
 				</a>
 			</div>
 		)
