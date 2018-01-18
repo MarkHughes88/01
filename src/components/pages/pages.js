@@ -12,7 +12,10 @@ class Pages extends React.Component {
 	renderPageSwitch(page) {
 		switch (page) {
 			case 'Home':
-				return <Home />
+				return <Home
+						activeUser={ this.props.activeUser }
+						users={ this.props.users }
+					/>
 			case 'Content':
 				return <Content />
 			case 'Media':
@@ -25,7 +28,10 @@ class Pages extends React.Component {
 			case 'Help':
 				return <Help />
 			default:
-				return <Home />;
+				return <Home
+						activeUser={ this.props.activeUser }
+						users={ this.props.users }
+					/>;
 		}
 	}
 
@@ -40,7 +46,7 @@ class Pages extends React.Component {
 					<Route exact path='/help' component={ () => <Help /> } />
 				</div>
 			</Router> **/
-			<div className={`pages ${this.props.sliderActive ? 'pages--margin' : null }`}>
+			<div className={`container-fluid pages ${this.props.sliderActive ? 'pages--margin' : null }`}>
 				{ this.renderPageSwitch(this.props.pageState) }
 			</div>
 		)

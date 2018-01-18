@@ -69,7 +69,7 @@ class Users extends React.Component {
 
 							 		 </div>
 							 		 <div className='col-md-4 text-center image-container'>
-							 			 <div class='image-container__image'>
+							 			 <div className='image-container__image'>
 							 				 <span className='image-container__image__background rounded-circle' style={{
 							 						 backgroundImage: `url(${ user.image })`
 							 					 }}></span>

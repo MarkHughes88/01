@@ -5,12 +5,13 @@
 	position: absolute;
 	width: calc(100vw - #{$menu-width});
 	@include transition(all, ease, .5s);
+	padding: 0px;
 }
 
 .pages--margin {
-	margin-left: $menu-slider-width;
-	width: calc(100vw - (#{$menu-slider-width} + #{$menu-width}));
-	@include transition(margin, ease, .5s);
+	// margin-left: $menu-slider-width;
+	// width: calc(100vw - (#{$menu-slider-width} + #{$menu-width}));
+	// @include transition(margin, ease, .5s);
 }
 
 .pages__header {
@@ -21,4 +22,6 @@
 
 .pages__content {
 	padding: $padding-xl $padding;
+	overflow-y: auto;
+	height: calc(100vh - #{$pages-header-height});
 }

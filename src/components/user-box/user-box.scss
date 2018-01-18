@@ -8,12 +8,13 @@
 	width: 0;
 	height: 0;
 	overflow: hidden;
-	@include box-shadow(4px, 4px, 5px, #eee);
+	@include box-shadow(4px, 4px, 5px, rgba(0,0,0,.05));
 	z-index: $user-box-z;
 	background-color: $user-box-background;
 	border: $user-box-border-width $user-box-border-color solid;
 	@include transition(all, ease, .2s);
 	opacity: 0;
+	padding: 0;
 }
 
 .user-box--active {
@@ -55,7 +56,7 @@
 	height: $user-box-icon-size;
 	border: $user-box-icon-border-width $user-box-icon-border-color solid;
 	background-image: url($user-box-icon-background);
-	background-size: contain;
+	background-size: cover;
 }
 
 .user-box__content__details {

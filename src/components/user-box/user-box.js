@@ -40,19 +40,17 @@ class UserBox extends React.Component {
 
 	render() {
 		return (
-			<div className={`user-box ${ this.props.userBoxActive ? 'user-box--active' : null }`}>
-				<div className='container-fluid'>
-					<div className='row'>
-						<div className='container-fluid user-box__header'>
-							<h2 className='user-box__header__title'>Logged in User</h2>
-							<span
-								className='fa fa-window-close user-box__header__close'
-								onClick={ this.props.userBoxState }
-							></span>
-						</div>
+			<div className={`container-fluid user-box ${ this.props.userBoxActive ? 'user-box--active' : null }`}>
+				<div className='row'>
+					<div className='container-fluid user-box__header'>
+						<h2 className='user-box__header__title'>Logged in User</h2>
+						<span
+							className='fa fa-window-close user-box__header__close'
+							onClick={ this.props.userBoxState }
+						></span>
 					</div>
-					{ this.renderSwitch(this.state.logout) }
 				</div>
+				{ this.renderSwitch(this.state.logout) }
 			</div>
 		)
 	}

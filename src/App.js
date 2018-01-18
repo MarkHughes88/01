@@ -23,8 +23,8 @@ class App extends React.Component {
         },
         currentPage: 'home',
         activeUser: {
-          id: '0',
-          image: 'http://agarioskins.com/submitted/useruploads/Rick%20sanchez.png'
+          id: undefined,
+          image: undefined,
         },
         selectedUser: {
           id: undefined
@@ -32,6 +32,10 @@ class App extends React.Component {
         users: UserData.Users || {} // <-- fallback incase users dont load
       }
 	}
+
+  componentWillMount() {
+    this.setActiveUser();
+  }
 
   componentWillUpdate(nextProps, nextState) {
     if(nextState.selectedUser !== this.state.selectedUser) {
@@ -87,10 +91,20 @@ class App extends React.Component {
     });
   }
 
+  setActiveUser() {
+    this.setState({
+      activeUser: {
+        id: this.state.users[1].id,
+        image: this.state.users[1].image
+      }
+    })
+  }
+
   changePage(page) {
     this.setState({
       currentPage: page,
-      userBoxActive: false
+      userBoxActive: false,
+      sliderActive: false
     });
   }
 
@@ -115,6 +129,7 @@ class App extends React.Component {
           changePage={ (page) => this.changePage(page) }
           pageState={ this.state.currentPage }
           selectedUser={ this.state.selectedUser.id }
+          activeUser={ this.state.activeUser.id }
           users={ this.state.users }
         />
         <UserBox
