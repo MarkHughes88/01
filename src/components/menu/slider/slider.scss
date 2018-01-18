@@ -25,7 +25,7 @@
 	width: $menu-slider-width;
 	opacity: 1;
 	@include transition(all, ease, .5s);
-	@include box-shadow(4px, 0px, 5px, #eee);
+	@include box-shadow(4px, 0px, 5px, rgba(0,0,0,.075));
 
 	.menu__slider__content {
 		opacity: 1;

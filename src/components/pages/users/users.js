@@ -3,7 +3,6 @@ import React from 'react';
 class Users extends React.Component {
 	render() {
 		var user = this.props.users[this.props.selectedUser]
-
 		return (
 			<div className='container-fluid'>
 				<div className='row pages__header'>

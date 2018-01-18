@@ -23,27 +23,25 @@ class App extends React.Component {
         },
         currentPage: 'home',
         activeUser: {
-          id: '0',
-          name: 'Mark',
+          id: '0'
+  /**        name: 'Mark',
           userName: 'MarkHughes88',
           role: 'Administrator',
-          email: 'mark@myemail.com'
+          email: 'mark@myemail.com' **/
         },
         selectedUser: {
           id: undefined
         },
         users: UserData.Users || {} // <-- fallback incase users dont load
       }
-
-      this.selectUser = this.selectUser.bind(this);
 	}
 
-/**  componentWillUpdate(nextProps, nextState) {
+  componentWillUpdate(nextProps, nextState) {
     if(nextState.selectedUser !== this.state.selectedUser) {
       console.log('componentWillUpdate', 'Updating User to ' + nextState.selectedUser.id)
     }
   }
-
+ /**
  componentDidUpdate(prevProps, prevState) {
     if(this.state.selectedUser !== prevState.selectedUser) {
       console.log('componentDidUpdate', 'User has updated to ' + this.state.selectedUser.id + ' from ' + prevState.selectedUser.id);
@@ -73,6 +71,14 @@ class App extends React.Component {
   setUserBoxState() {
     this.setState({
       userBoxActive: !this.state.userBoxActive
+    })
+  }
+
+  userBoxEditUser(activeUser) {
+    this.setState({
+      selectedUser: {
+        id: activeUser
+      }
     })
   }
 
@@ -114,11 +120,9 @@ class App extends React.Component {
         <UserBox
           userBoxActive={ this.state.userBoxActive }
           userBoxState={ () => this.setUserBoxState() }
-          activeUserName={ this.state.activeUser.userName }
-          activeUserRole={ this.state.activeUser.role }
-          activeUserEmail={ this.state.activeUser.email }
-          selectedUser={ this.state.selectedUser.id }
+          users={ this.state.users }
           activeUser={ this.state.activeUser.id }
+          editUser={ (activeUser) => { this.userBoxEditUser(activeUser) } }
           changePage={ (page) => this.changePage(page) }
         />
         <div className='container-fluid pages__header pages__header--fallback'></div>

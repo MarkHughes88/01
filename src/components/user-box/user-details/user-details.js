@@ -2,13 +2,15 @@ import React from 'react';
 
 class UserDetails extends React.Component {
 	render() {
+		var activeUser = this.props.users[this.props.activeUser]
+
 		return (
 			<div className='row'>
 				<div className='container-fluid user-box__content'>
 					<div className='row'>
 						<div className='container-fluid text-center'>
 							<span className='user-box__content__icon rounded-circle'></span>
-							<h3>Welcome { this.props.activeUserName }</h3>
+							<h3>Welcome { activeUser.username }</h3>
 						</div>
 					</div>
 					<div className='row justify-content-sm-center'>
@@ -18,32 +20,33 @@ class UserDetails extends React.Component {
 									Username:
 								</dt>
 								<dd className='col-sm-7'>
-									{ this.props.activeUserName }
+									{ activeUser.username }
 								</dd>
 								<dt className='col-sm-5'>
 									Role:
 								</dt>
 								<dd className='col-sm-7'>
-									{ this.props.activeUserRole }
+									{ activeUser.role }
 								</dd>
 								<dt className='col-sm-5'>
 									Email:
 								</dt>
 								<dd className='col-sm-7'>
-									{ this.props.activeUserEmail }
+									{ activeUser.email }
 								</dd>
 							</dl>
 						</div>
 					</div>
 					<div className='row'>
 						<div className='col-sm-6'>
-							<a
+							<span
 								className='btn button button-primary btn-block'
 								onClick={ () => {
+										this.props.editUser(activeUser.id);
 										this.props.changePage('Users');
 									}
 								}
-							>Edit details</a>
+							>Edit details</span>
 						</div>
 						<div className='col-sm-6'>
 							<button

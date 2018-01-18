@@ -26,13 +26,11 @@ class UserBox extends React.Component {
 				/>
 			case false:
 				return <UserDetails
-					activeUserName={ this.props.activeUserName }
-					activeUserRole={ this.props.activeUserRole }
-					activeUserEmail={ this.props.activeUserEmail }
 					toggleLogout={ () => this.toggleLogout() }
-					selectedUser={ this.state.selectedUser }
-					activeUser={ this.state.activeUser }
-					changePage={ (page) => this.changePage(page) }
+					users={ this.props.users }
+					editUser={ this.props.editUser }
+					activeUser={ this.props.activeUser }
+					changePage={ this.props.changePage }
 				/>;
 			default: { this.renderSwitch(false) }
 		}
