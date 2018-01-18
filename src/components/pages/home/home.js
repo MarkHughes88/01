@@ -11,7 +11,7 @@ class Home extends React.Component {
 				</div>
 				<div className='row pages__content'>
 					<div className="border container">
-					  <div className="border row justify-content-md-center">
+					  <div className="border row justify-content-md-center m-0">
 					    <div className="border col col-lg-2">
 					      1 of 3
 					    </div>
@@ -22,7 +22,7 @@ class Home extends React.Component {
 					      3 of 3
 					    </div>
 					  </div>
-					  <div className="border row">
+					  <div className="border row m-0">
 					    <div className="border col">
 					      1 of 3
 					    </div>

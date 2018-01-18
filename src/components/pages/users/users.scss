@@ -5,12 +5,9 @@
 	padding: $padding;
 }
 
-.user-details__content {
-	width: 100%;
-}
-
 .image-container {
 	background-color: darken($brand-light-grey, 10%);
+	padding: $padding;
 }
 
 .image-container__image {
@@ -28,4 +25,9 @@
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
+}
+
+.image-container__image__link {
+	text-decoration: underline;
+	cursor: pointer;
 }
