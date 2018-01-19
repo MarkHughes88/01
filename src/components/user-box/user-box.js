@@ -23,6 +23,7 @@ class UserBox extends React.Component {
 			case true:
 				return <Logout
 					toggleLogout={ () => this.toggleLogout() }
+					logout={ this.props.logout }					
 				/>
 			case false:
 				return <UserDetails

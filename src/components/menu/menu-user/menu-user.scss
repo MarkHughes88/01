@@ -10,6 +10,7 @@
 	border: $menu-user-icon-border-width $menu-user-icon-border-color solid;
 	background-image: url($menu-user-icon-background);
 	background-size: cover;
+	background-position: center;
 	width: $menu-user-icon-width;
 	height: $menu-user-icon-height;
 	display: inline-block;

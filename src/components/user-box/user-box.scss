@@ -57,6 +57,7 @@
 	border: $user-box-icon-border-width $user-box-icon-border-color solid;
 	background-image: url($user-box-icon-background);
 	background-size: cover;
+	background-position: center;
 }
 
 .user-box__content__details {

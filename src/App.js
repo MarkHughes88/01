@@ -44,17 +44,9 @@ class App extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-  /**  if(nextState.selectedUser !== this.state.selectedUser) {
-      console.log('componentWillUpdate', 'Updating User to ' + nextState.selectedUser.id)
-    } **/
-    console.log(this.state.login.isLoggedIn)
   }
 
  componentDidUpdate(prevProps, prevState) {
-  /**  if(this.state.selectedUser !== prevState.selectedUser) {
-      console.log('componentDidUpdate', 'User has updated to ' + this.state.selectedUser.id + ' from ' + prevState.selectedUser.id);
-    } **/
-
     // End console group for this render()
     console.groupEnd();
   }
@@ -123,7 +115,7 @@ class App extends React.Component {
         username: user.username,
         password: user.password,
         image: user.image
-    }))
+    }));
 
     for(var i = 0; i < users.length; i++) {
       if(inputName === users[i].username) {
@@ -146,6 +138,15 @@ class App extends React.Component {
         console.log('failed on username');
       }
     }
+  }
+
+  logout() {
+    this.setState({
+      login: {
+        isLoggedIn: false
+      }
+    })
+    console.log('logout')
   }
 
   render() {
@@ -190,6 +191,7 @@ class App extends React.Component {
               activeUserImage={ this.state.activeUser.image }
               editUser={ (activeUser) => { this.userBoxEditUser(activeUser) } }
               changePage={ (page) => this.changePage(page) }
+              logout={ () => this.logout() }
             />
             <div className='container-fluid pages__header pages__header--fallback'></div>
           </div>

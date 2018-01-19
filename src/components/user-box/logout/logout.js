@@ -12,12 +12,15 @@ class Logout extends React.Component {
 					</div>
 					<div className='row'>
 						<div className='col-sm-6'>
-							<button className='btn button button-primary btn-block'>Yes</button>
+							<button
+								className='btn button button-primary btn-block'
+								onClick={ this.props.logout }
+							>Yes</button>
 						</div>
 						<div className='col-sm-6'>
 							<button
 								className='btn button button-secondary btn-block'
-								onClick={ this.props.toggleLogout }								
+								onClick={ this.props.toggleLogout }
 							>No</button>
 						</div>
 					</div>
