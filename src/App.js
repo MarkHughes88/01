@@ -23,7 +23,11 @@ class App extends React.Component {
           userBoxActive: false
         },
         currentPage: 'home',
-        loggedIn: false,
+        login: {
+          isLoggedIn: false,
+          username: undefined,
+          password: undefined
+        },
         activeUser: {
           id: undefined,
           image: undefined,
@@ -43,6 +47,7 @@ class App extends React.Component {
   /**  if(nextState.selectedUser !== this.state.selectedUser) {
       console.log('componentWillUpdate', 'Updating User to ' + nextState.selectedUser.id)
     } **/
+    console.log(this.state.login.isLoggedIn)
   }
 
  componentDidUpdate(prevProps, prevState) {
@@ -110,12 +115,51 @@ class App extends React.Component {
     });
   }
 
+  login(username, password) {
+    let inputName = username;
+    let inputPassword = password;
+    let users = this.state.users.map(user => ({
+        id: user.id,
+        username: user.username,
+        password: user.password,
+        image: user.image
+    }))
+
+    for(var i = 0; i < users.length; i++) {
+      if(inputName === users[i].username) {
+        if(inputPassword === users[i].password) {
+          this.setState({
+            login: {
+              isLoggedIn: true
+            },
+            activeUser: {
+              id: users[i].id,
+              image: users[i].image
+            }
+          })
+          break;
+        } else {
+          console.log('failed on password');
+        }
+        break;
+      } else {
+        console.log('failed on username');
+      }
+    }
+  }
+
   render() {
-    const isLoggedIn = this.state.loggedIn;
+    const isLoggedIn = this.state.login.isLoggedIn;
 
     return (
       <div className="App">
-        { isLoggedIn ?
+        { !isLoggedIn ?
+          <Login
+            isLoggedIn={ (username, password) => this.login(username, password) }
+            username={ this.login.username }
+            password={ this.login.password }
+          />
+          :
           <div>
             <Menu
               sliderActive={ this.state.sliderActive }
@@ -149,8 +193,6 @@ class App extends React.Component {
             />
             <div className='container-fluid pages__header pages__header--fallback'></div>
           </div>
-          :
-          <Login />
          }
       </div>
     );

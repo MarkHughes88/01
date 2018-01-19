@@ -6,7 +6,7 @@
 			"username": 		"MarkHughes88",
 			"role": 				"Administrator",
 			"email":				"mark@myemail.com",
-			"password": 		"Password0",
+			"password": 		"password0",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBi296qjVlIgdB0zFUUgNgAqtKH-WiprQS1t6WR12fnt7uEFWd"
 		},
 		{
@@ -15,7 +15,7 @@
 			"username": 		"JohnBoy",
 			"role": 				"Editor",
 			"email":				"john@myemail.com",
-			"password": 		"Password1",
+			"password": 		"password1",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXpTpz2Z0BO3nzKAetMnp2pDjILnyw3fsKoRb0b9uqbXoXOG9QMQ"
 		},
 		{
@@ -24,7 +24,7 @@
 			"username": 		"Nothadoth",
 			"role": 				"Administrator",
 			"email":				"thomas@myemail.com",
-			"password": 		"Password2",
+			"password": 		"password2",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIJKDmoEpCTjSY9WxSNvhIo6SzxfWaDmXuLMw26zf_1Kt2hLnIeA"
 		},
 		{
@@ -33,7 +33,7 @@
 			"username": 		"SpareHeadOne",
 			"role": 				"User",
 			"email":				"michael@myemail.com",
-			"password": 		"Password3",
+			"password": 		"password3",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwg_syVSycsp_5O-35QY5fvmGhJpowYarcCb_HZkPHXBjbd_6C"
 		},
 		{
@@ -42,7 +42,7 @@
 			"username": 		"MelonHead",
 			"role": 				"User",
 			"email":				"christopher@myemail.com",
-			"password": 		"Password4",
+			"password": 		"password4",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSc_JvaZ0IGJbbcPNcwPtjOUEvRtBg-xGZSCrCrcuKF7W-jriIJyA"
 		},
 		{
@@ -51,7 +51,7 @@
 			"username": 		"CMurda",
 			"role": 				"User",
 			"email":				"claire@myemail.com",
-			"password": 		"Password5",
+			"password": 		"password5",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvhICSv0hYZYW0OlxPyY7PHzSDjb3NioXqC9BhDiuprMRg4EBgJQ"
 		},
 		{
@@ -60,7 +60,7 @@
 			"username": 		"Billybob",
 			"role": 				"User",
 			"email":				"william@myemail.com",
-			"password": 		"Password6",
+			"password": 		"password6",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DVgx2wPXej1zhieqI9uArA2eEcZkSxYaY2aiN2SgSTIzH2bu"
 		},
 		{
@@ -69,7 +69,7 @@
 			"username": 		"TilMeister",
 			"role": 				"User",
 			"email":				"tilly@myemail.com",
-			"password": 		"Password7",
+			"password": 		"password7",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRQWP50FTS-xBrczu5DbglmclP4Ui2fSi0-nOPhhhsuxnbRzsl8A"
 		},
 		{
@@ -78,7 +78,7 @@
 			"username": 		"Jimbob88",
 			"role": 				"User",
 			"email":				"james@myemail.com",
-			"password": 		"Password8",
+			"password": 		"password8",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuReIw3Iw6mhQ9vFXO1XVgL1R10qCROG25XkEvsageo3QzuoKK"
 		},
 		{
@@ -87,7 +87,7 @@
 			"username": 		"MrMclaren",
 			"role": 				"User",
 			"email":				"peter@myemail.com",
-			"password": 		"Password9",
+			"password": 		"password9",
 			"image": 				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBzCCt3TaL8qPRwPsD9xVMWiVIVeUjuzTqf3jw3UhXdSgttF5M"
 		}
 	]
