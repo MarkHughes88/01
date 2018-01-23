@@ -192,7 +192,6 @@ class App extends React.Component {
               changePage={ (page) => this.changePage(page) }
               logout={ () => this.logout() }
             />
-            <div className='container-fluid pages__header pages__header--fallback'></div>
           </div>
          }
       </div>
