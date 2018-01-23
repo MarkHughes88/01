@@ -16,7 +16,7 @@
 .button {
 	@include border-radius($button-border-radius);
 	border: 0px solid transparent;
-	padding: $button-padding;
+	padding: $button-padding $padding-lg;
 }
 
 .button-primary {
@@ -46,8 +46,6 @@
 }
 
 label {
-	height: 44px !important;
-	line-height: 44px;
 	font-weight: bold;
 }
 

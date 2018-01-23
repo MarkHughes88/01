@@ -1,22 +1,52 @@
 @import "../../style/scss/main.scss";
 
-.login-container {
+.login-wrapper {
 	width: 100%;
 	height: 100vh;
 	background-color: $brand-tertiary;
 	position: relative;
 }
 
-.login-container__login-box {
+.login-wrapper__login-container {
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	@include translate(-50%, -50%);
 	width: 600px;
+}
+
+.login-wrapper__login-container__login-box {
 	background-color: white;
 	padding: $padding;
 }
 
-.login-container__login-box__button-container {
-		padding-top: $padding;
+.login-wrapper__login-container__login-box__button-container {
+		padding-top: $padding / 2;
+}
+
+.login-wrapper__login-container__login-box__title {
+	font-size: 30px;
+	line-height: $line-height * 2;
+}
+
+.login-wrapper__login-container__login-box__forgot-password {
+	line-height: 46px;
+}
+
+.login-wrapper__login-container__login-box__quote {
+	position: relative;
+	width: 600px;
+	background-color: rgba(white, .75);
+	padding: $padding;
+	margin-top: $padding-lg;
+
+	p {
+		text-align: center;
+		width: calc(100% - #{$padding});
+		margin-bottom: 0px;
+
+		span:last-of-type {
+			color: $brand-red
+		}
+	}
 }
