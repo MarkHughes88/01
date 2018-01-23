@@ -18,10 +18,18 @@
 	height: $pages-header-height;
 	background-color: $pages-header-background;
 	padding: $padding;
+	position: relative;
+}
+
+.pages__header__title {
+	position: absolute;
+	top: 50%;
+	@include translate(0, -50%);
 }
 
 .pages__content {
 	padding: $padding-xl $padding;
 	overflow-y: auto;
 	height: calc(100vh - #{$pages-header-height});
+	display: block;
 }

@@ -17,19 +17,22 @@ class PagesHome extends React.Component {
 	render () {
 		return (
 			<div>
+
 				<div className='row pages__header'>
 					<div className='container-fluid'>
-						<h1>Home</h1>
+						<h1 className='pages__header__title'>Home</h1>
 					</div>
 				</div>
+
 				<div className='row pages__content'>
 					<div className="container-fluid">
 					  <div className="row justify-content-md-center">
 							<div className='col-md-8 text-center'>
+
 								<div className='row'>
 									<div className='container-fluid'>
-										<h1>Welcome to my dummy react-app CMS</h1>
-										<h2>Howdy! (｡◕‿‿◕｡) This is a dummy react project built by Mark Hughes!</h2>
+										<h2 style={{margin: '0px'}}>Welcome to my dummy react-app CMS</h2>
+										<h3>Howdy! (｡◕‿‿◕｡) This is a dummy react project built by Mark Hughes!</h3>
 										<br></br>
 									</div>
 								</div>
@@ -37,10 +40,7 @@ class PagesHome extends React.Component {
 								<div className='row'>
 									<div className='dummy-content container-fluid'>
 										<div className='row'>
-											<div className='col-sm-6 dummy-content__image' style={{
-													backgroundImage: `url(${ this.state.images[0] })`
-												}}>
-											</div>
+											<div className='col-sm-6 dummy-content__image' style={{backgroundImage: `url(${ this.state.images[0] })`}}></div>
 											<div className='col-sm-6 dummy-content__text'>
 												<h3>Lorem ipsum dolor sit amet</h3>
 												<p>
@@ -69,10 +69,7 @@ class PagesHome extends React.Component {
 													modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
 												</p>
 											</div>
-											<div className='col-sm-6 dummy-content__image' style={{
-													backgroundImage: `url(${ this.state.images[1] })`
-												}}>
-											</div>
+											<div className='col-sm-6 dummy-content__image' style={{backgroundImage: `url(${ this.state.images[1] })`}}></div>
 										</div>
 									</div>
 								</div>
@@ -80,10 +77,7 @@ class PagesHome extends React.Component {
 								<div className='row'>
 									<div className='dummy-content container-fluid'>
 										<div className='row'>
-											<div className='col-sm-6 dummy-content__image' style={{
-													backgroundImage: `url(${ this.state.images[2] })`
-												}}>
-											</div>
+											<div className='col-sm-6 dummy-content__image' style={{backgroundImage: `url(${ this.state.images[2] })`}}></div>
 											<div className='col-sm-6 dummy-content__text'>
 												<h3>Ut enim ad minima veniam</h3>
 												<p>
@@ -99,8 +93,8 @@ class PagesHome extends React.Component {
 							</div>
 					  </div>
 					</div>
-
 				</div>
+
 			</div>
 		)
 	}

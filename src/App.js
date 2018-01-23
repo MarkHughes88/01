@@ -146,7 +146,6 @@ class App extends React.Component {
         isLoggedIn: false
       }
     })
-    console.log('logout')
   }
 
   render() {

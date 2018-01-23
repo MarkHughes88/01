@@ -1,11 +1,13 @@
 @import '_var.scss';
 @import '_mixins.scss';
+@import '_typography.scss';
 
 .border {
-	border: 1px solid black;
+	border: 2px solid black;
 	padding: $padding;
 }
 
+// Fix for incorrect nesting in bootstrap 4
 .row {
 	margin: 0 !important;
 }
@@ -37,6 +39,7 @@
 	}
 }
 
+// Form Styles
 .form-control {
 	height: 44px !important;
 	border: 1px solid $border-color;
