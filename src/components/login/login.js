@@ -58,6 +58,9 @@ class Login extends React.Component {
 						<div className='row'>
 							<div className='container-fluid text-center'>
 								<h1 className='login-wrapper__login-container__login-box__title'>Please login</h1>
+									{ this.props.failed === true ?
+									<p>Username or password was incorrect. Please try again</p>
+									: null }
 							</div>
 						</div>
 						<form>

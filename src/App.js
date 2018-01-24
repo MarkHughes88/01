@@ -26,7 +26,8 @@ class App extends React.Component {
         login: {
           isLoggedIn: false,
           username: undefined,
-          password: undefined
+          password: undefined,
+          failed: false
         },
         activeUser: {
           id: undefined,
@@ -132,10 +133,20 @@ class App extends React.Component {
           break;
         } else {
           console.log('failed on password');
+          this.setState({
+            login: {
+              failed: true
+            }
+          })
         }
         break;
       } else {
         console.log('failed on username');
+        this.setState({
+          login: {
+            failed: true
+          }
+        })
       }
     }
   }
@@ -158,6 +169,7 @@ class App extends React.Component {
             isLoggedIn={ (username, password) => this.login(username, password) }
             username={ this.login.username }
             password={ this.login.password }
+            failed={ this.state.login.failed }
           />
           :
           <div>
