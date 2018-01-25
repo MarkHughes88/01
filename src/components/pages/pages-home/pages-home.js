@@ -7,8 +7,6 @@ class PagesHome extends React.Component {
 	constructor(props) {
 			super(props);
 			this.state = {
-				title: undefined,
-				subtitle: undefined,
 				data: {
 					content: undefined,
 					articles: undefined
@@ -20,27 +18,9 @@ class PagesHome extends React.Component {
 		this.renderContent();
 	}
 
-	componentDidMount() {
-
-	}
-
 	renderContent() {
-        /**
-		 * Note: I have changed your json file to use lowercase keys for convention. Only use a capital letter when referring to a component.
-		 * Plus, as seen in the ES6 below, it makes it much easier to work with.
-         */
+    const { content, articles } = data.home;
 
-        /**
-		 * There is no need to iterate through this. But ill leave this in so you can see how it works..
-         */
-        Object.keys(data.home).map(key => console.log(key, data.home[key]));
-
-        const { content, articles } = data.home; // ES6 shortcut for defining variables
-		console.error(content, articles);
-
-        /**
-		 * Another ES6 shortcut - is the same as content: content and articles: articles.
-         */
 		this.setState({
 			data: {
 				content, articles
@@ -48,22 +28,8 @@ class PagesHome extends React.Component {
 		})
 	}
 
-	/** displayContent() {
-		var content = data.Home.Content.map(Content => {
-			return {
-				title: Content.title,
-				subtitle: Content.subtitle
-			}
-		});
-
-		this.setState({
-			title: content.title,
-			subtitle: content.subtitle
-		})
-	}
-**/
 	render() {
-		/** var Articles = data.Home.Articles.map(article => {
+ 		var Articles = this.state.data.articles.map(article => {
 			return (
 				<Article
 					key={ article.id }
@@ -73,7 +39,7 @@ class PagesHome extends React.Component {
 					image={ article.image }
 				/>
 			)
-		}); **/
+		});
 
 		return (
 			<div>
@@ -89,7 +55,15 @@ class PagesHome extends React.Component {
 					  <div className="row justify-content-md-center">
 							<div className='col-md-8 text-center'>
 
+								<div className='row'>
+									<div className='container-fluid'>
+										<h2 style={{margin: '0px'}}>{ this.state.data.content.title }</h2>
+										<h3>{ this.state.data.content.subtitle }</h3>
+										<br></br>
+									</div>
+								</div>
 
+								{ Articles }
 
 							</div>
 					  </div>
