@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.scss';
 
-import Quotes from '../../data/quotes.json';
+import Data from '../../data/quotes.json';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -34,7 +34,7 @@ class Login extends React.Component {
 	}
 
 	displayQuote() {
-		var quotes = Quotes.Quotes.map(Quote => {
+		var quotes = Data.Quotes.map(Quote => {
 			return {
 				Author: Quote.Author,
 				Quote: Quote.Quote
@@ -59,7 +59,7 @@ class Login extends React.Component {
 							<div className='container-fluid text-center'>
 								<h1 className='login-wrapper__login-container__login-box__title'>Please login</h1>
 									{ this.props.failed === true ?
-									<p>Username or password was incorrect. Please try again</p>
+									<p className='login-wrapper__login-container__login-box__error'>Username or password was incorrect. Please try again</p>
 									: null }
 							</div>
 						</div>
@@ -96,12 +96,12 @@ class Login extends React.Component {
 							</div>
 							<div className='row login-wrapper__login-container__login-box__button-container'>
 								<div className='col-sm-6'>
-									<button
+									<a
 										className='btn button button-primary'
 										onClick={
 											(username, password) => this.props.isLoggedIn(this.state.inputUsername, this.state.inputPassword)
 										}
-									>Login</button>
+									>Login</a>
 								</div>
 								<div className='col-sm-6 text-right login-wrapper__login-container__login-box__forgot-password'>
 									<a>Forgotten your password?</a>

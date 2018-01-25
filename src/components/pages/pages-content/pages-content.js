@@ -6,7 +6,7 @@ class PagesContent extends React.Component {
 			<div className='container-fluid'>
 				<div className='row pages__header'>
 					<div className='container-fluid'>
-						<h1>Content</h1>
+						<h1 className='pages__header__title'>Content</h1>
 					</div>
 				</div>
 				<div className='row pages__content'>

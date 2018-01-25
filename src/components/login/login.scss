@@ -30,6 +30,10 @@
 	line-height: $line-height * 2;
 }
 
+.login-wrapper__login-container__login-box__error {
+	color: $brand-red;
+}
+
 .login-wrapper__login-container__login-box__forgot-password {
 	line-height: 46px;
 }

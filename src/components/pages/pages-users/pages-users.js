@@ -5,10 +5,10 @@ class PagesUsers extends React.Component {
 	render() {
 		let user = this.props.users[this.props.selectedUser]
 		return (
-			<div className='container-fluid'>
+			<div>
 				<div className='row pages__header'>
 					<div className='container-fluid'>
-						<h1>User Details</h1>
+						<h1 className='pages__header__title'>User Details</h1>
 					</div>
 				</div>
 				<div className='row pages__content'>
