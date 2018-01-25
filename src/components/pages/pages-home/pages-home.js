@@ -1,7 +1,7 @@
 import React from 'react';
 import './pages-home.scss';
 import Article from './pages-home-article/pages-home-article';
-import Data from '../../../data/home.json';
+import data from '../../../data/home.json';
 
 class PagesHome extends React.Component {
 	constructor(props) {
@@ -11,7 +11,7 @@ class PagesHome extends React.Component {
 				subtitle: undefined,
 				data: {
 					content: undefined,
-					Articles: undefined
+					articles: undefined
 				}
 			}
 	}
@@ -25,25 +25,31 @@ class PagesHome extends React.Component {
 	}
 
 	renderContent() {
-		var content = Data.Home.map(Content => {
-			return {
-				content: Content.Content,
-				articles: Content.Articles
-			}
-		});
+        /**
+		 * Note: I have changed your json file to use lowercase keys for convention. Only use a capital letter when referring to a component.
+		 * Plus, as seen in the ES6 below, it makes it much easier to work with.
+         */
 
-		console.log(content.content)
+        /**
+		 * There is no need to iterate through this. But ill leave this in so you can see how it works..
+         */
+        Object.keys(data.home).map(key => console.log(key, data.home[key]));
 
+        const { content, articles } = data.home; // ES6 shortcut for defining variables
+		console.error(content, articles);
+
+        /**
+		 * Another ES6 shortcut - is the same as content: content and articles: articles.
+         */
 		this.setState({
 			data: {
-				content: content.content,
-				articles: content.articles
+				content, articles
 			}
 		})
 	}
 
 	/** displayContent() {
-		var content = Data.Home.Content.map(Content => {
+		var content = data.Home.Content.map(Content => {
 			return {
 				title: Content.title,
 				subtitle: Content.subtitle
@@ -57,7 +63,7 @@ class PagesHome extends React.Component {
 	}
 **/
 	render() {
-		/** var Articles = Data.Home.Articles.map(article => {
+		/** var Articles = data.Home.Articles.map(article => {
 			return (
 				<Article
 					key={ article.id }
